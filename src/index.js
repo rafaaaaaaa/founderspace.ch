@@ -22,7 +22,7 @@ root.render(
   <React.StrictMode>
     <div className="flex flex-col h-screen justify-between">
       <Header />
-      <main className="mt-36 max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 mb-96">
+      <main className="flex flex-wrap items-center justify-between mx-auto p-4 z-20">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Landing />}></Route>
@@ -38,10 +38,11 @@ root.render(
 
     <Particles
       id="tsparticles"
+      className="absolute top-0 left-0 w-full h-screen z-10"
       init={particlesInit}
       options={{
         fullScreen: {
-          enable: true,
+          enable: false,
           zIndex: -1,
         },
         particles: {

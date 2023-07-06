@@ -31,7 +31,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="text-white mb-4 font-haas">USEFUL LINKS</h4>
+            <h4 className="text-highlight1 mb-4 font-haas">USEFUL LINKS</h4>
             <ul>
               <li>
                 <FooterLink title="Events" href="events" />
@@ -48,7 +48,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-white mb-4 font-haas">CONTACT</h4>
+            <h4 className="text-highlight1 mb-4 font-haas">CONTACT</h4>
             <p className="text-white text-sm font-haas">
               University Of Zurich <br />
               Rämistrasse 71, 8006 Zurich

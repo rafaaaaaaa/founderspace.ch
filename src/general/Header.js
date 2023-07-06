@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "./Link";
 import Hamburger from "hamburger-react";
+import Button from "./Button";
 
 function Header() {
   const [opened, setOpened] = useState(false);
@@ -22,6 +23,13 @@ function Header() {
                 className="h-16 mr-3"
                 alt="FounderSpace Logo"
               />
+              {opened && (
+                <img
+                  src={require("../founderspace-logo.png")}
+                  className="h-16 mr-3 absolute logo-glow"
+                  alt="FounderSpace Logo"
+                />
+              )}
             </a>
             <div className="inline-flex md:hidden">
               <Hamburger toggled={opened} toggle={setOpened} color="white" />
@@ -39,13 +47,7 @@ function Header() {
                   <Link href="board" title="Board" />
                 </li>
                 <li>
-                  <a
-                    href="join"
-                    type="button"
-                    className="text-white bg-highlight2  focus:ring-4 rounded-lg text-sm px-5 py-2.5 font-h"
-                  >
-                    Join Us
-                  </a>
+                  <Button href="join" text="Join Us" />
                 </li>
               </ul>
             </div>

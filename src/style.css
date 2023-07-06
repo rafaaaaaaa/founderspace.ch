@@ -41,7 +41,6 @@
     }
   }
 
-
   .glow {
     color: #fff;
     text-align: center;
@@ -57,4 +56,47 @@
     to {
       text-shadow: 0 0 20px #fff, 0 0 30px #ab7ee2, 0 0 40px #ab7ee2, 0 0 50px #ab7ee2, 0 0 60px #ab7ee2, 0 0 70px #ab7ee2, 0 0 80px #ab7ee2;
     }
+  }
+
+
+  .glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .fade-up-title {
+    opacity: 0; /* Start with the text hidden */
+    animation: fadeUpAnimation 1s ease-in-out forwards; /* Apply the animation */
+  }
+
+  .fade-up-subtitle {
+    opacity: 0; /* Start with the text hidden */
+    animation: fadeUpAnimation 2s ease-in-out forwards; /* Apply the animation */
+  }
+  
+  .fade-up-button {
+    opacity: 0; /* Start with the text hidden */
+    animation: fadeUpAnimation 3s ease-in-out forwards; /* Apply the animation */
+  }
+
+  @keyframes fadeUpAnimation {
+    from {
+      opacity: 0.7; /* Start the animation with 0 opacity */
+      transform: translateY(20px); /* Move the text 20px down */
+    }
+    to {
+      opacity: 1; /* End the animation with full opacity */
+      transform: translateY(0); /* Reset the text position */
+    }
+  }
+
+  .logo-glow {
+    z-index:1;
+    filter: brightness(0) invert(1) blur(5px);
+    -webkit-filter: brightness(0) invert(1) blur(5px);
+    opacity:1;
   }

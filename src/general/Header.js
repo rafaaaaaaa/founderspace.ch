@@ -1,15 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "./Link";
 import Hamburger from "hamburger-react";
 import Button from "./Button";
 
 function Header() {
   const [opened, setOpened] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
 
   return (
     <header>
       <div>
-        {opened && (
+        {opened & isMobile && (
           <div
             id="blurOverlay"
             className="fixed top-0 left-0 w-full h-full backdrop-blur-sm bg-transparent z-30 none"
@@ -23,7 +36,7 @@ function Header() {
                 className="h-16 mr-3"
                 alt="FounderSpace Logo"
               />
-              {opened && (
+              {opened & isMobile && (
                 <img
                   src={require("../founderspace-logo.png")}
                   className="h-16 mr-3 absolute logo-glow"

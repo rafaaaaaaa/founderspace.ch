@@ -70,23 +70,23 @@
 
   .fade-up-title {
     opacity: 0; /* Start with the text hidden */
-    animation: fadeUpAnimation 1s ease-in-out forwards; /* Apply the animation */
+    animation: fadeUpAnimation 0.9s ease-in-out forwards; /* Apply the animation */
   }
 
   .fade-up-subtitle {
     opacity: 0; /* Start with the text hidden */
-    animation: fadeUpAnimation 2s ease-in-out forwards; /* Apply the animation */
+    animation: fadeUpAnimation 1.2s ease-in-out forwards; /* Apply the animation */
   }
   
   .fade-up-button {
     opacity: 0; /* Start with the text hidden */
-    animation: fadeUpAnimation 3s ease-in-out forwards; /* Apply the animation */
+    animation: fadeUpAnimation 1.4s ease-in-out forwards; /* Apply the animation */
   }
 
   @keyframes fadeUpAnimation {
-    from {
-      opacity: 0.7; /* Start the animation with 0 opacity */
-      transform: translateY(20px); /* Move the text 20px down */
+    from {      
+      opacity: 0; /* Start the animation with 0 opacity */
+      transform: translateY(70px); /* Move the text 20px down */
     }
     to {
       opacity: 1; /* End the animation with full opacity */

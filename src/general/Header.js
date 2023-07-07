@@ -22,7 +22,7 @@ function Header() {
   return (
     <header>
       <div>
-        {opened & isMobile && (
+        {opened && isMobile && (
           <div
             id="blurOverlay"
             className="fixed top-0 left-0 w-full h-full backdrop-blur-sm bg-transparent z-30 none"
@@ -36,7 +36,7 @@ function Header() {
                 className="h-16 mr-3"
                 alt="FounderSpace Logo"
               />
-              {opened & isMobile && (
+              {opened && isMobile && (
                 <img
                   src={require("../founderspace-logo.png")}
                   className="h-16 mr-3 absolute logo-glow"
@@ -67,7 +67,7 @@ function Header() {
 
             {opened && (
               <div className="block w-full md:hidden">
-                <ul className="font-medium flex flex-col pt-4 gap-4">
+                <ul className="font-medium flex flex-col pt-4 gap-4 text-2xl">
                   <li>
                     <Link href="events" title="Events" />
                   </li>

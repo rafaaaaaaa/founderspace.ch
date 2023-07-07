@@ -94,7 +94,7 @@ function Events() {
         connect with like-minded individuals, and gain practical wisdom from
         those who have already paved their way to success.
         <br />
-        <span className="text-highlight1">We are happy to welcome you</span>
+        <span className="text-highlight1">We are happy to welcome you.</span>
       </p>
       <div className="h-max w-full">
         {!isMobile && (
@@ -117,7 +117,7 @@ function Events() {
               cardText: "0.8rem",
             }}
             classNames={{
-              cardSubTitle: "my-card-subtitle",
+              cardSubTitle: "my-card-subtitle"
             }}
           >
             {events.map((event) => eventItem(event))}
@@ -126,7 +126,7 @@ function Events() {
         {isMobile && (
           <div>
             {events.map((event) => (
-              <div className="mb-10">{eventItem(event)} </div>
+              <div key={event.title} className="mb-10">{eventItem(event)} </div>
             ))}
           </div>
         )}

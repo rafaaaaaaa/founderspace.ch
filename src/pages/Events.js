@@ -88,7 +88,7 @@ function Events() {
   return (
     <div className="max-w-screen-xl flex flex-wrap justify-between mt-36 md:p-4 text-justify">
       <p className="text-white text-1xl text-center md:text-left md:text-2xl mb-20">
-        Whether you're a budding entrepreneur, a curious student, or simply
+        Whether you're a budding entrepreneur, a curious UZH student, or simply
         interested in the dynamic world of startups and business ventures, our
         events are open to all and completely free. Expand your horizons,
         connect with like-minded individuals, and gain practical wisdom from
@@ -117,7 +117,7 @@ function Events() {
               cardText: "0.8rem",
             }}
             classNames={{
-              cardSubTitle: "my-card-subtitle"
+              cardSubTitle: "my-card-subtitle",
             }}
           >
             {events.map((event) => eventItem(event))}
@@ -126,7 +126,9 @@ function Events() {
         {isMobile && (
           <div>
             {events.map((event) => (
-              <div key={event.title} className="mb-10">{eventItem(event)} </div>
+              <div key={event.title} className="mb-10">
+                {eventItem(event)}{" "}
+              </div>
             ))}
           </div>
         )}

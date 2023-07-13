@@ -16,7 +16,7 @@ function Footer() {
                 alt="FounderSpace Logo"
               />
             </a>
-            <p className="text-white text-sm font-haas">
+            <p className="text-white text-sm font-italic">
               Your student initiative club connects the startup industry with
               the University of Zurich by providing a platform for students to
               learn about and engage with the startup community.
@@ -31,7 +31,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="text-highlight1 mb-4 font-haas">USEFUL LINKS</h4>
+            <h4 className="text-highlight1 mb-4 font-medium">USEFUL LINKS</h4>
             <ul>
               <li>
                 <FooterLink title="Events" href="events" />
@@ -48,8 +48,8 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-highlight1 mb-4 font-haas">CONTACT</h4>
-            <p className="text-white text-sm font-haas">
+            <h4 className="text-highlight1 mb-4 font-medium">CONTACT</h4>
+            <p className="text-white text-sm font-light">
               University Of Zurich <br />
               Rämistrasse 71, 8006 Zurich
               <br />
@@ -60,7 +60,7 @@ function Footer() {
             </p>
           </div>
         </div>
-        <div className="w-full py-8 md:py-16 flex items-center justify-center text-white font-haas text-sm">
+        <div className="w-full py-8 md:py-16 flex items-center justify-center text-white font-light text-sm">
           <p>
             &copy; {currentYear} FounderSpace University Of Zurich. All Rights
             Reserved.

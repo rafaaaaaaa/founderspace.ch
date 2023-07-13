@@ -31,6 +31,16 @@ function Events() {
       signupLink: "https://www.eventbrite.ch/",
     },
     {
+      title: "10.10.2023",
+      eventTitle: "Microsoft - How Big Tech uses BI",
+      eventDecription:
+        "This is a event that will take place at the university of zurich",
+      dateTimeString: "KOL-F-101, Rämistrasse 154, 8000 Zurich",
+      imageURL:
+        "https://news.microsoft.com/wp-content/uploads/prod/sites/418/2018/06/Logo.jpg",
+      signupLink: "https://www.eventbrite.ch/",
+    },
+    {
       title: "02.11.2023",
       eventTitle: "Planted - Transforming an idea into practice",
       eventDecription:
@@ -61,22 +71,22 @@ function Events() {
             src={event.imageURL}
             alt={event.eventTitle}
           />
-          <h3 className="absolute text-md text-primary top-5 right-5 font-haas">
+          <h3 className="absolute text-md text-primary top-5 right-5">
             {event.title}
           </h3>
         </div>
         <div className="p-5">
-          <h5 className="mb-2 text-lg mb:text-xl font-bold text-primary font-haas">
+          <h5 className="mb-2 text-lg mb:text-xl font-bold text-primary">
             {event.eventTitle}
           </h5>
           <div className="flex flex-row mb-3 items-center">
             <FaMapMarker size={22} />
-            <p className="ml-3 text-sm mb:text-2xl font-bold text-black font-haas">
+            <p className="ml-3 text-sm mb:text-2xl font-medium text-black ">
               {event.dateTimeString}
             </p>
           </div>
 
-          <p className="mb-3 text-sm md:text-md font-normal text-black font-haas">
+          <p className="mb-3 text-sm md:text-md font-light text-black">
             {event.eventDecription}
           </p>
           <Button text="Sign Up" href={event.signupLink} />

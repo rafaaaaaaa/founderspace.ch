@@ -13,8 +13,12 @@ module.exports = {
     },
     fontFamily: {
       sans: ["ui-sans-serif"],
-      haas: ["HAAS", "sans-serif"],
+      light: ["Switzer-Light", "Switzer-Light"],
+      medium: ["Switzer-Medium", "Switzer-Medium"],
+      bold: ["Switzer-Bold", "Switzer-Bold"],
+      italic: ["Switzer-Light-Italic", "Switzer-Light-Italic"],
     },
   },
   plugins: [],
 };
+

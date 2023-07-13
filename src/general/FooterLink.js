@@ -10,7 +10,7 @@ function FooterLink(props) {
       />
       <a
         href={props.href}
-        className={`text-sm block pl-3 pr-4 text-white hover:text-highlight1 font-haas ${
+        className={`text-sm block pl-3 pr-4 text-white hover:text-highlight1 font-light ${
           props.isActive ? "text-highlight1" : "text-white"
         }`}
         aria-current="page"

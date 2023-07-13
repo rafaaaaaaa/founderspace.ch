@@ -3,8 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "HAAS";
-  src: url("../public/fonts/Haas.otf");
+  font-family: "Switzer-Light";
+  src: url("../public/fonts/Switzer-Light.otf");
+}
+@font-face {
+  font-family: "Switzer-Medium";
+  src: url("../public/fonts/Switzer-Medium.otf");
+}
+@font-face {
+  font-family: "Switzer-Bold";
+  src: url("../public/fonts/Switzer-Bold.otf");
+}
+
+@font-face {
+  font-family: "Switzer-Light-Italic";
+  src: url("../public/fonts/Switzer-LightItalic.otf");
 }
 
 body {

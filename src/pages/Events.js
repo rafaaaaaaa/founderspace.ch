@@ -3,75 +3,52 @@ import "./../style.css";
 import Button from "../general/Button";
 import { FaMapMarker } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { getEvents } from "../components/contentfulClient";
 
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);
+  const [events, setEvents] = useState([]);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
+    getEvents().then((res) => {
+      transformDatetimeStringAndWrite(res);
+    });
+
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, []);
+  });
+
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", options);
+  };
 
   const isMobile = width <= 768;
 
-  const events = [
-    {
-      title: "10.10.2023",
-      eventTitle: "Microsoft - How Big Tech uses BI",
-      eventDecription:
-        "This is a event that will take place at the university of zurich",
-      dateTimeString: "KOL-F-101, Rämistrasse 154, 8000 Zurich",
-      imageURL:
-        "https://news.microsoft.com/wp-content/uploads/prod/sites/418/2018/06/Logo.jpg",
-      signupLink: "https://www.eventbrite.ch/",
-    },
-    {
-      title: "10.10.2023",
-      eventTitle: "Microsoft - How Big Tech uses BI",
-      eventDecription:
-        "This is a event that will take place at the university of zurich",
-      dateTimeString: "KOL-F-101, Rämistrasse 154, 8000 Zurich",
-      imageURL:
-        "https://news.microsoft.com/wp-content/uploads/prod/sites/418/2018/06/Logo.jpg",
-      signupLink: "https://www.eventbrite.ch/",
-    },
-    {
-      title: "02.11.2023",
-      eventTitle: "Planted - Transforming an idea into practice",
-      eventDecription:
-        "This is a event that will take place at the university of zurich",
-      dateTimeString: "KOL-F-101, Rämistrasse 154, 8000 Zurich",
-      imageURL:
-        "https://vegconomist.de/wp-content/uploads/sites/2/Planted_Logo_PansyPurple.jpeg",
-      signupLink: "https://www.eventbrite.ch/",
-    },
-    {
-      title: "23.10.2023",
-      eventTitle: "Nikin - How I founded a clothing brand",
-      eventDecription:
-        "This is a event that will take place at the university of zurich",
-      dateTimeString: "KOL-F-101, Rämistrasse 154, 8000 Zurich",
-      imageURL:
-        "https://cdn.shopify.com/s/files/1/2426/4919/files/01_Logo-Quer-Standard_black_1.png?height=628&pad_color=fff&v=1631108129&width=1200",
-      signupLink: "https://www.eventbrite.ch/",
-    },
-  ];
+  const transformDatetimeStringAndWrite = (events) => {
+    const transformedData = events.map((obj) => {
+      const transformedDatetime = formatDate(obj.eventDatetime);
+      return { ...obj, title: transformedDatetime };
+    });
+    setEvents(transformedData);
+  };
 
   function eventItem(event) {
     return (
       <div className="bg-white rounded-lg overflow-hidden" key={event.title}>
         <div className="relative">
           <img
-            className="rounded-t-lg object-contain h-36"
-            src={event.imageURL}
+            className="rounded-t-lg object-contain h-32"
+            src={event.eventImage.fields.file.url}
             alt={event.eventTitle}
           />
-          <h3 className="absolute text-md text-primary top-5 right-5">
+          <h3 className="absolute text-md text-primary top-5 right-5 font-bold">
             {event.title}
           </h3>
         </div>
@@ -82,14 +59,14 @@ function Events() {
           <div className="flex flex-row mb-3 items-center">
             <FaMapMarker size={22} />
             <p className="ml-3 text-sm mb:text-2xl font-medium text-black ">
-              {event.dateTimeString}
+              {event.eventLocation}
             </p>
           </div>
 
           <p className="mb-3 text-sm md:text-md font-light text-black">
-            {event.eventDecription}
+            {event.eventDescription}
           </p>
-          <Button text="Sign Up" href={event.signupLink} />
+          <Button text="Sign Up" href={event.signUpUrl} />
         </div>
       </div>
     );
@@ -107,40 +84,43 @@ function Events() {
         <span className="text-highlight1">We are happy to welcome you.</span>
       </p>
       <div className="h-max w-full">
-        {!isMobile && (
-          <Chrono
-            className="h-96"
-            mode="VERTICAL_ALTERNATING"
-            items={events}
-            hideControls={true}
-            theme={{
-              primary: "#01ABFD",
-              secondary: "white",
-              cardBgColor: "white",
-              titleColor: "#01ABFD",
-              titleColorActive: "#01ABFD",
-            }}
-            fontSizes={{
-              title: "1rem",
-              cardTitle: "1.5rem",
-              cardSubtitle: "1rem",
-              cardText: "0.8rem",
-            }}
-            classNames={{
-              cardSubTitle: "my-card-subtitle",
-            }}
-          >
-            {events.map((event) => eventItem(event))}
-          </Chrono>
-        )}
-        {isMobile && (
-          <div>
-            {events.map((event) => (
-              <div key={event.title} className="mb-10">
-                {eventItem(event)}{" "}
-              </div>
-            ))}
-          </div>
+        {events.length > 0 ? (
+          !isMobile ? (
+            <Chrono
+              className="h-96"
+              mode="VERTICAL_ALTERNATING"
+              items={events}
+              hideControls={true}
+              theme={{
+                primary: "#01ABFD",
+                secondary: "white",
+                cardBgColor: "white",
+                titleColor: "#01ABFD",
+                titleColorActive: "#01ABFD",
+              }}
+              fontSizes={{
+                title: "1rem",
+                cardTitle: "1.5rem",
+                cardSubtitle: "1rem",
+                cardText: "0.8rem",
+              }}
+              classNames={{
+                cardSubTitle: "my-card-subtitle",
+              }}
+            >
+              {events?.map((event) => eventItem(event))}
+            </Chrono>
+          ) : (
+            <div>
+              {events?.map((event) => (
+                <div key={event.eventTitle} className="mb-10">
+                  {eventItem(event)}{" "}
+                </div>
+              ))}
+            </div>
+          )
+        ) : (
+          <div></div>
         )}
       </div>
     </div>

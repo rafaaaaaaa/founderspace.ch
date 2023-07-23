@@ -8,20 +8,26 @@ import { getEvents } from "../components/contentfulClient";
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);
   const [events, setEvents] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
     getEvents().then((res) => {
-      transformDatetimeStringAndWrite(res);
+      const transformedData = res.map((obj) => {
+        const transformedDatetime = formatDate(obj.eventDatetime);
+        return { ...obj, title: transformedDatetime };
+      });
+      setEvents(transformedData);
+      setIsLoaded(true);
     });
 
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  });
+  }, []);
 
   const formatDate = (dateString) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
@@ -30,14 +36,6 @@ function Events() {
   };
 
   const isMobile = width <= 768;
-
-  const transformDatetimeStringAndWrite = (events) => {
-    const transformedData = events.map((obj) => {
-      const transformedDatetime = formatDate(obj.eventDatetime);
-      return { ...obj, title: transformedDatetime };
-    });
-    setEvents(transformedData);
-  };
 
   function eventItem(event) {
     return (
@@ -83,7 +81,11 @@ function Events() {
         <br />
         <span className="text-highlight1">We are happy to welcome you.</span>
       </p>
-      <div className="h-max w-full">
+      <div
+        className={`h-max w-full animated ${
+          isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
+        }`}
+      >
         {events.length > 0 ? (
           !isMobile ? (
             <Chrono

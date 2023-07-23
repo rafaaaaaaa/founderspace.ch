@@ -1,7 +1,7 @@
 function JoinUs() {
   return (
-    <div className="max-w-screen-xl flex flex-wrap items-center justify-between h-screen">
-      <p className="text-white">JoinUs</p>
+    <div className="max-w-screen-xl flex flex-wrap justify-between mt-36 md:p-4 text-justify">
+    
     </div>
   );
 }

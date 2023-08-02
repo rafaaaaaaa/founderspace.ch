@@ -25,7 +25,7 @@ function Footer() {
               <a href="https://www.linkedin.com/company/founderspace-the-entrepreneurship-club-at-uzh">
                 <FaLinkedin color="white" size={24} />
               </a>
-              <a href="https://www.linkedin.com/company/founderspace-the-entrepreneurship-club-at-uzh">
+              <a href="https://www.instagram.com/founderspace.ch/">
                 <FaInstagram color="white" size={24} />
               </a>
             </div>

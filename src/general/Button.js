@@ -7,6 +7,7 @@ function Button(props) {
     >
       {props.text}
     </a>
+    
   );
 }
 

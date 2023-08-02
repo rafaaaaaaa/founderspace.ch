@@ -22,10 +22,10 @@ root.render(
   <React.StrictMode>
     <div className="flex flex-col h-screen justify-between">
       <Header />
-      <main className="flex flex-wrap items-center justify-between mx-auto p-4 z-20">
+      <main className="flex flex-wrap items-center justify-between mx-auto z-20">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Landing />}></Route>
+            <Route className="overflow-hidden" path="/" element={<Landing />}></Route>
             <Route path="/events" element={<Events />}></Route>
             <Route path="/partnerships" element={<Partnerships />}></Route>
             <Route path="/board" element={<Board />}></Route>

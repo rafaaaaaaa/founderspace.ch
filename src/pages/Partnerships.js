@@ -18,7 +18,7 @@ function Partnerships() {
     return (
       <a href={partner.websiteurl}>
         <img
-          class="w-66 rounded-lg shadow-xl dark:shadow-gray-800"
+          className="w-66 rounded-lg shadow-xl dark:shadow-gray-800"
           src={partner.logo.fields.file.url}
           alt="sponsor"
         />
@@ -44,14 +44,19 @@ function Partnerships() {
           forward to working together to achieve our shared goals.
           <br />
         </p>
-        <Button href="mailto:contact@foundespace.ch" text="Get in touch" />
+        <a
+          href="mailto:contact@foundespace.ch"
+          type="button"
+          className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text"
+        >
+          Get in touch
+        </a>
       </div>
 
       <div
         id="lowerSection"
-        className={`animated ${
-          isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
-        }`}
+        className={`animated ${isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
+          }`}
       >
         <span className="text-highlight1 text-1xl">OUR PARTNERS</span>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8">

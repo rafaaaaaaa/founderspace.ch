@@ -51,3 +51,18 @@ export const getBoardMembers = async () => {
     }
   };
   
+  export const getNews = async () => {
+    try {
+      const news = await client.getEntries({
+          content_type: "newsitem"
+      });
+      const filteredNews = news.items.map((data) => {
+          const filteredNewsItem = data.fields;
+          return filteredNewsItem;
+      })
+      return filteredNews;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  

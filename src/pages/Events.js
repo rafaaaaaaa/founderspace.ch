@@ -64,7 +64,13 @@ function Events() {
           <p className="mb-3 text-sm md:text-md font-light text-black">
             {event.eventDescription}
           </p>
-          <Button text="Sign Up" href={event.signUpUrl} />
+          <a
+            href={event.signUpUrl}
+            type="button"
+            className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text"
+          >
+            Sign Up
+          </a> 
         </div>
       </div>
     );
@@ -82,9 +88,8 @@ function Events() {
         <span className="text-highlight1">We are happy to welcome you.</span>
       </p>
       <div
-        className={`h-max w-full animated ${
-          isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
-        }`}
+        className={`h-max w-full animated ${isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
+          }`}
       >
         {events.length > 0 ? (
           !isMobile ? (

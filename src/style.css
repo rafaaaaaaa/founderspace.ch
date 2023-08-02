@@ -1,5 +1,3 @@
-
-
 h1 span {
   animation: pulsate 1.5s ease-in-out infinite alternate;
 }
@@ -28,28 +26,39 @@ h1 span {
 }
 
 .fade-up-title {
-  opacity: 0; /* Start with the text hidden */
-  animation: fadeUpAnimation 0.9s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  /* Start with the text hidden */
+  animation: fadeUpAnimation 0.9s ease-in-out forwards;
+  /* Apply the animation */
 }
 
 .fade-up-subtitle {
-  opacity: 0; /* Start with the text hidden */
-  animation: fadeUpAnimation 1.2s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  /* Start with the text hidden */
+  animation: fadeUpAnimation 1.2s ease-in-out forwards;
+  /* Apply the animation */
 }
 
 .fade-up-button {
-  opacity: 0; /* Start with the text hidden */
-  animation: fadeUpAnimation 1.4s ease-in-out forwards; /* Apply the animation */
+  opacity: 0;
+  /* Start with the text hidden */
+  animation: fadeUpAnimation 1.4s ease-in-out forwards;
+  /* Apply the animation */
 }
 
 @keyframes fadeUpAnimation {
   from {
-    opacity: 0; /* Start the animation with 0 opacity */
-    transform: translateY(70px); /* Move the text 20px down */
+    opacity: 0;
+    /* Start the animation with 0 opacity */
+    transform: translateY(70px);
+    /* Move the text 20px down */
   }
+
   to {
-    opacity: 1; /* End the animation with full opacity */
-    transform: translateY(0); /* Reset the text position */
+    opacity: 1;
+    /* End the animation with full opacity */
+    transform: translateY(0);
+    /* Reset the text position */
   }
 }
 
@@ -63,4 +72,30 @@ h1 span {
 .my-card-subtitle {
   margin-left: 0.5rem !important;
   display: flex !important;
+}
+
+.globe-video {
+  transition: transform 2.3s ease;
+  /* Add a smooth transition on transform */
+  transform: scale(1);
+}
+
+@media (max-width: 767px) {
+  .globe-video {
+    transform: scale(2.5);
+    /* Adjust the value (1.2) to zoom in further if needed */
+  }
+}
+
+@media (min-width: 767px) {
+  .globe-video {
+    transform: scale(1);
+    /* Adjust the value (1.2) to zoom in further if needed */
+  }
+
+  /* Add a hover effect to progressively scale the video */
+  .globe-video:hover {
+    transform: scale(1.1);
+    /* Adjust the value (1.2) for the hover scale */
+  }
 }

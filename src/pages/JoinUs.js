@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Title from '../general/Title';
 
 function JoinUs() {
 
@@ -22,9 +23,9 @@ function JoinUs() {
   };
 
   return (
-    <div className="max-w-screen-xl flex flex-wrap flex-col justify-between mt-36 md:p-4 text-justify w-full">
-      <span className="text-highlight1 text-1xl mb-2">Why join us?</span>
+    <div className="max-w-screen-xl flex flex-wrap flex-col justify-between md:p-4 text-justify w-full">
 
+      <Title text="Why join us?"/>
       <ul className="text-white text-1xl text-left md:text-2xl mb-8 list-disc text-justify">
         <p className="text-sm">
           <b>1. Unparalleled Learning Opportunities:</b><br />

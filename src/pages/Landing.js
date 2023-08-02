@@ -79,8 +79,7 @@ function Landing() {
             {item.content}</h3>
           <a
             className="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-highlight2 text-white mt-6"
-            href="https://headlessui.dev">Learn
-            more<span className="sr-only">, Completely unstyled, fully accessible UI components</span><svg
+            href="/">Read more<span className="sr-only">, Completely unstyled, fully accessible UI components</span><svg
               className="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400 dark:text-slate-500 dark:group-hover:text-slate-400"
               width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" strokeWidth="2"
               strokeLinecap="round" strokeLinejoin="round">

@@ -25,7 +25,7 @@ root.render(
       <main className="flex flex-wrap items-center justify-between mx-auto z-20">
         <BrowserRouter>
           <Routes>
-            <Route className="overflow-hidden" path="/" element={<Landing />}></Route>
+            <Route path="/" element={<Landing />}></Route>
             <Route path="/events" element={<Events />}></Route>
             <Route path="/partnerships" element={<Partnerships />}></Route>
             <Route path="/board" element={<Board />}></Route>

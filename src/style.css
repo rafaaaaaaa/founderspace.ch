@@ -80,9 +80,9 @@ h1 span {
   transform: scale(1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 467px) {
   .globe-video {
-    transform: scale(2.5);
+    transform: scale(1.2);
     /* Adjust the value (1.2) to zoom in further if needed */
   }
 }
@@ -93,9 +93,8 @@ h1 span {
     /* Adjust the value (1.2) to zoom in further if needed */
   }
 
-  /* Add a hover effect to progressively scale the video */
-  .globe-video:hover {
+  .title-section:hover .globe-video {
     transform: scale(1.1);
-    /* Adjust the value (1.2) for the hover scale */
   }
+
 }

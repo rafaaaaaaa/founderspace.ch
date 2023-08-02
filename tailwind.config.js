@@ -17,5 +17,5 @@ module.exports = {
       italic: ["Switzer-Light-Italic", "Switzer-Light-Italic"],
     },
   },
-  plugins: [require("tailwindcss-animated")],
+  plugins: [require("tailwindcss-animated"),   require('@tailwindcss/line-clamp')],
 };

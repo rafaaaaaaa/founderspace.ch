@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "../general/Button";
 import { useEffect } from "react";
 import { getPartners } from "../components/contentfulClient";
 

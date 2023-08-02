@@ -1,6 +1,5 @@
 import { Chrono } from "react-chrono";
 import "./../style.css";
-import Button from "../general/Button";
 import { FaMapMarker } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { getEvents } from "../components/contentfulClient";

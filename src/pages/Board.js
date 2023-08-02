@@ -16,9 +16,8 @@ function Board() {
   function memberItem(member) {
     return (
       <div
-        className={` max-w-screen-xl flex flex-wrap items-center justify-betweenanimated ${
-          isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
-        }`}
+        className={` max-w-screen-xl flex flex-wrap items-center justify-betweenanimated ${isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
+          }`}
         key={member.name}
       >
         <div className="w-full max-w-sm bg-white  rounded-lg shadow">

@@ -112,7 +112,7 @@ h1 .led-text {
 
 @media (max-width: 467px) {
   .globe-video {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 

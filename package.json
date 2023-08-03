@@ -15,8 +15,6 @@
     "flowbite": "^1.6.6",
     "flowbite-react": "^0.4.9",
     "hamburger-react": "^2.5.0",
-    "moment": "^2.29.4",
-    "next-routes": "^1.4.2",
     "react": "^18.2.0",
     "react-chrono": "^2.2.2",
     "react-dom": "^18.2.0",
@@ -27,7 +25,6 @@
     "tailwindcss-animated": "^1.0.1",
     "tsparticles": "^2.10.1",
     "typewriter-effect": "^2.20.1",
-    "use-count-up": "^3.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

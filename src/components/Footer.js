@@ -1,4 +1,4 @@
-import "./../style.css";
+import "./../index.css";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import FooterLink from "./FooterLink";
 

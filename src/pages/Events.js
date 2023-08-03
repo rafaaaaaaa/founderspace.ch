@@ -1,5 +1,5 @@
 import { Chrono } from "react-chrono";
-import "./../style.css";
+import "./../index.css";
 import { FaMapMarker } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { getEvents } from "../helpers/contentfulClient";

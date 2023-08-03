@@ -1,4 +1,4 @@
-import "./../style.css";
+import "./../index.css";
 import { Typewriter } from "react-simple-typewriter";
 import SponsorsSection from "../sections/SponsorsSection";
 import NewsSection from "../sections/NewsSection";
@@ -33,7 +33,7 @@ function Landing() {
              muted
              autoplay
              playsinline
-             src="${require('../landingvideo2.mp4')}"
+             src="${require('../landingvideo.mp4')}"
              class="z-30 globe-video" 
              width="max" 
              height="max"

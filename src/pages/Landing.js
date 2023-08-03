@@ -9,7 +9,7 @@ function Landing() {
   function TitleSection() {
     return (
       <div className="flex items-center h-[60vh] overflow-x-hidden sm:overflow-visible">
-        <div className="w-full md:w-2/3 z-10">
+        <div className="w-full md:w-2/3 z-10 flex flex-col gap-4 items-center md:items-start">
           <h1 className="text-white text-4xl text-center md:text-start md:text-6xl font-bold fade-up-title">
             Connecting <span className="swiss-text ">SWISS</span> startup experience with {" "}
             <span className="tracking-wide font-italic led-text">
@@ -24,6 +24,16 @@ function Landing() {
               />
             </span>
           </h1>
+          <h2 className="text-highlight1 text-1xl md:text-2xl font-medium fade-up-subtitle">
+            Think big. Start small.
+          </h2>
+          <a
+            href="events"
+            type="button"
+            className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text fade-up-button"
+          >
+            See Events
+          </a>
         </div>
 
         <div className="absolute md:relative z-0 globe-video" dangerouslySetInnerHTML={{

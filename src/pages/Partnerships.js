@@ -1,33 +1,9 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { getPartners } from "../components/contentfulClient";
+import SponsorsSection from "../sections/SponsorsSection";
 
 function Partnerships() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [partners, setPartners] = useState([]);
-
-  useEffect(() => {
-    getPartners().then((res) => {
-      setPartners(res.sort((a, b) => a.order - b.order));
-      setIsLoaded(true);
-    });
-  }, []);
-
-  function partnerItem(partner) {
-    return (
-      <a href={partner.websiteurl}>
-        <img
-          className="w-66 rounded-lg shadow-xl dark:shadow-gray-800"
-          src={partner.logo.fields.file.url}
-          alt="sponsor"
-        />
-      </a>
-    );
-  }
-
   return (
     <div className="max-w-screen-xl flex flex-col flex-wrap justify-between mt-36 md:p-4 text-justify gap-4">
-      <div id="uppersection" className="mb-24">
+      <div className="mb-24">
         <span className="text-highlight1 text-1xl">PARTNERSHIPS</span>
         <p className="text-white text-1xl text-left md:text-2xl mb-8">
           FounderSpace is the bridge between the entrepreneurial world and our
@@ -52,16 +28,7 @@ function Partnerships() {
         </a>
       </div>
 
-      <div
-        id="lowerSection"
-        className={`animated ${isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
-          }`}
-      >
-        <span className="text-highlight1 text-1xl">OUR PARTNERS</span>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-8">
-          {partners?.map((partner) => partnerItem(partner))}
-        </div>
-      </div>
+      {SponsorsSection()}
     </div>
   );
 }

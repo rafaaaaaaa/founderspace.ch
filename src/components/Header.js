@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "./Link";
 import Hamburger from "hamburger-react";
 import Button from "./Button";
-import { useScrollDirection } from "../components/useScrollDirection";
+import { useScrollDirection } from "../helpers/useScrollDirection";
 
 function Header() {
   const [opened, setOpened] = useState(false);
@@ -22,10 +22,9 @@ function Header() {
   const isMobile = width <= 768;
 
   return (
-    <header className={`sticky ${scrollDirection === "down" && !opened ? "-top-24" : "top-0"} h-24 transition-all duration-500 z-50`}>
-
+    <header className={`w-full sticky ${scrollDirection === "down" && !opened ? "-top-24" : "top-0"} h-24 transition-all duration-500 z-50`}>
       <nav className="backdrop-blur-sm">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <a href="/" className="flex items-center">
             <img
               src={require("../founderspace-logo.png")}

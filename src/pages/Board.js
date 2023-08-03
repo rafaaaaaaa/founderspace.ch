@@ -1,5 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
-import { getBoardMembers } from "../components/contentfulClient";
+import { getBoardMembers } from "../helpers/contentfulClient";
 import { useEffect, useState } from "react";
 
 function Board() {

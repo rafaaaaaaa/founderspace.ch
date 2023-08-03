@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Header from "./general/Header";
+import Header from "./components/Header";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Footer from "./general/Footer";
+import Footer from "./components/Footer";
+
 import Landing from "./pages/Landing";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Partnerships from "./pages/Partnerships";
 import Board from "./pages/Board";
 import JoinUs from "./pages/JoinUs";
@@ -20,9 +21,9 @@ const particlesInit = async (main) => {
 
 root.render(
   <React.StrictMode>
-    <div className="flex flex-col h-screen justify-between">
+    <div className="max-w-screen-xl flex flex-col items-center justify-between mx-auto p-4 gap-8">
       <Header />
-      <main className="flex flex-wrap items-center justify-between mx-auto z-20">
+      <main>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Landing />}></Route>
@@ -38,7 +39,7 @@ root.render(
 
     <Particles
       id="tsparticles"
-      className="absolute top-0 left-0 w-full h-screen z-10"
+      className="absolute top-0 left-0 w-full h-screen -z-10"
       init={particlesInit}
       options={{
         fullScreen: {

@@ -1,4 +1,4 @@
-h1 span {
+h1 .led-text {
   animation: pulsate 1.5s ease-in-out infinite alternate;
 }
 
@@ -13,7 +13,6 @@ h1 span {
       0 0 73px #5271ff, 0 0 80px #000c42
   }
 }
-
 
 
 .glass {
@@ -83,18 +82,34 @@ h1 span {
 @media (max-width: 467px) {
   .globe-video {
     transform: scale(1.2);
-    /* Adjust the value (1.2) to zoom in further if needed */
   }
 }
 
 @media (min-width: 767px) {
   .globe-video {
     transform: scale(1);
-    /* Adjust the value (1.2) to zoom in further if needed */
   }
 
-  .title-section:hover .globe-video {
+  .globe-video:hover {
     transform: scale(1.1);
   }
 
+}
+
+.swiss-text {
+  background: url("https://www.montaguebikes.com/wp-content/uploads/2018/03/swiss-flag-wide.png") center center;
+  background-size: contain;
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  font-family: Catamaran, sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.social-icon:hover {
+  color: theme('colors.highlight1') !important;
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Title from '../general/Title';
+import Title from '../components/Title';
 
 function JoinUs() {
 

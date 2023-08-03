@@ -2,7 +2,7 @@ import { Chrono } from "react-chrono";
 import "./../style.css";
 import { FaMapMarker } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import { getEvents } from "../components/contentfulClient";
+import { getEvents } from "../helpers/contentfulClient";
 
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);

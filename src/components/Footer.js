@@ -1,3 +1,4 @@
+import "./../style.css";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import FooterLink from "./FooterLink";
 
@@ -5,8 +6,8 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="w-full backdrop-blur-sm">
-      <footer className=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div className="backdrop-blur-sm">
+      <footer className="flex flex-wrap items-center justify-between mx-auto">
         <div className="grid grid-cols-1 gap-12 justify-items-start md:grid-cols-3 md:gap-4 md:justify-items-center">
           <div>
             <a href="/" className="logo d-flex align-items-center">
@@ -23,10 +24,10 @@ function Footer() {
             </p>
             <div className="mt-3 flex flex-row gap-2">
               <a href="https://www.linkedin.com/company/founderspace-the-entrepreneurship-club-at-uzh">
-                <FaLinkedin color="white" size={24} />
+                <FaLinkedin className="social-icon" color="white" size={24} />
               </a>
               <a href="https://www.instagram.com/founderspace.ch/">
-                <FaInstagram color="white" size={24} />
+                <FaInstagram className="social-icon" color="white"  size={24} />
               </a>
             </div>
           </div>
@@ -55,7 +56,7 @@ function Footer() {
               <br />
               Switzerland <br />
               <br />
-              contact@founderspace.ch
+              <a className="underline" href="mailto:contact@founderspace.ch">contact@founderspace.ch</a>
               <br />
             </p>
           </div>

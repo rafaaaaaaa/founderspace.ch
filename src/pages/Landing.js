@@ -8,11 +8,11 @@ function Landing() {
 
   function TitleSection() {
     return (
-      <div className="flex flex-col items-center justify-center h-[60vh] md:h-[90vh] overflow-hidden title-section">
-        <div className="flex flex-col gap-6 items-center md:self-start md:items-start z-50 w-3/5 absolute m-5 title-section">
+      <div className="flex items-center h-[60vh]">
+        <div className="w-full md:w-2/3 z-10">
           <h1 className="text-white text-4xl text-center md:text-start md:text-6xl font-bold fade-up-title">
-            Connecting Swiss startup experience with <br />
-            <span className="tracking-wide font-italic">
+            Connecting <span className="swiss-text ">SWISS</span> startup experience with {" "}
+            <span className="tracking-wide font-italic led-text">
               <Typewriter
                 words={["UZH", "students", "Zurich"]}
                 loop={100}
@@ -24,48 +24,31 @@ function Landing() {
               />
             </span>
           </h1>
-          <h2 className="text-highlight1 text-1xl md:text-2xl font-medium fade-up-subtitle">
-            Think big. Start small.
-          </h2>
-          <div className="fade-up-button">
-            <a
-              href="events"
-              type="button"
-              className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-64 font-medium fade-up-text"
-            >
-              See Events
-            </a>
-          </div>
         </div>
 
-        <div className="self-center z-30 globe-video bg-blue-500" dangerouslySetInnerHTML={{
+        <div className="absolute md:relative z-0 globe-video" dangerouslySetInnerHTML={{
           __html: `
-          <video
-            loop
-            muted
-            autoplay
-            playsinline
-            src="${require('../landingvideo2.mp4')}"
-            class="z-30" 
-            width="max" 
-            height="max"
-          />,
-        ` }} />
+           <video
+             loop
+             muted
+             autoplay
+             playsinline
+             src="${require('../landingvideo2.mp4')}"
+             class="z-30 globe-video" 
+             width="max" 
+             height="max"
+           />,
+         ` }} />
       </div>
-
     );
   }
 
   return (
-    <div className="max-w-screen-xl flex flex-col gap-24 justify-between">
-
+    <div className="block flex flex-col gap-6 md:gap-16">
       {TitleSection()}
-
-      <div className="flex flex-col gap-32 w-full m-5 items-center md:items-start">
-        {SponsorsSection()}
-        {NewsSection()}
-      </div>
-    </div >
+      {NewsSection()}
+      {SponsorsSection()}
+    </div>
   );
 }
 

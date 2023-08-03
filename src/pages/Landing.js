@@ -8,7 +8,7 @@ function Landing() {
 
   function TitleSection() {
     return (
-      <div className="flex items-center h-[60vh]">
+      <div className="flex items-center h-[60vh] overflow-x-hidden sm:overflow-visible">
         <div className="w-full md:w-2/3 z-10">
           <h1 className="text-white text-4xl text-center md:text-start md:text-6xl font-bold fade-up-title">
             Connecting <span className="swiss-text ">SWISS</span> startup experience with {" "}

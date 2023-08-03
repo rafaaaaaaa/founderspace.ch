@@ -6,7 +6,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="backdrop-blur-sm">
+    <div className="backdrop-blur-sm md:mt-24">
       <footer className="flex flex-wrap items-center justify-between mx-auto">
         <div className="grid grid-cols-1 gap-12 justify-items-start md:grid-cols-3 md:gap-4 md:justify-items-center">
           <div>
@@ -17,7 +17,7 @@ function Footer() {
                 alt="FounderSpace Logo"
               />
             </a>
-            <p className="text-white text-sm font-italic">
+            <p className="text-white text-sm font-italic text-justify">
               Your student initiative club connects the startup industry with
               the University of Zurich by providing a platform for students to
               learn about and engage with the startup community.

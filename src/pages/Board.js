@@ -43,9 +43,9 @@ function Board() {
   }
 
   return (
-    <div className="max-w-screen-xl flex flex-wrap justify-between mt-36 md:p-4 text-justify">
+    <div>
       <p className="text-white text-1xl md:text-left md:text-2xl mb-20 text-justify animate-fade-up animate-delay-300 animate-once">
-        <span className="text-highlight1">Meet the FounderSpace Board</span> - a
+        <span className="text-highlight1 text-1xl">Meet the FounderSpace Board</span> - a
         dynamic team of passionate UZH students united by a common mission: to
         create value for our fellow students. We believe in the transformative
         power of entrepreneurship and its ability to empower individuals to

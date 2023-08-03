@@ -23,11 +23,10 @@ function JoinUs() {
   };
 
   return (
-    <div className="max-w-screen-xl flex flex-wrap flex-col justify-between md:p-4 text-justify w-full">
-
-      <Title text="Why join us?"/>
-      <ul className="text-white text-1xl text-left md:text-2xl mb-8 list-disc text-justify">
-        <p className="text-sm">
+    <div>
+      <Title text="WHY JOIN US?" />
+      <ul className="text-white text-left mb-8 list-disc text-justify">
+        <p className="text-1xl">
           <b>1. Unparalleled Learning Opportunities:</b><br />
           Get inspired by industry leaders and successful entrepreneurs through our engaging speaker sessions and workshops. Learn the ins and outs of founding and scaling a startup, gaining practical knowledge for your future endeavors.
           <br />

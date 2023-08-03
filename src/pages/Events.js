@@ -3,6 +3,7 @@ import "./../index.css";
 import { FaMapMarker } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { getEvents } from "../helpers/contentfulClient";
+import Title from '../components/Title';
 
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -38,18 +39,15 @@ function Events() {
 
   function eventItem(event) {
     return (
-      <div className="bg-white rounded-lg overflow-hidden" key={event.title}>
+      <div className="bg-white rounded-lg overflow-hidden p-4" key={event.title}>
         <div className="relative">
           <img
-            className="rounded-t-lg object-contain h-32"
+            className="rounded-t-lg object-contain w-64 h-64"
             src={event.eventImage.fields.file.url}
             alt={event.eventTitle}
           />
-          <h3 className="absolute text-md text-primary top-5 right-5 font-bold">
-            {event.title}
-          </h3>
         </div>
-        <div className="p-5">
+        <div>
           <h5 className="mb-2 text-lg mb:text-xl font-bold text-primary">
             {event.eventTitle}
           </h5>
@@ -69,15 +67,15 @@ function Events() {
             className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text"
           >
             Sign Up
-          </a> 
+          </a>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-screen-xl flex flex-wrap justify-between mt-36 md:p-4 text-justify">
-      <p className="text-white text-1xl text-center md:text-left md:text-2xl mb-20">
+    <div className="">
+      <p className="text-white text-1xl text-justify md:text-left md:text-2xl mb-20">
         Whether you're a budding entrepreneur, a curious UZH student, or simply
         interested in the dynamic world of startups and business ventures, our
         events are open to all and completely free. Expand your horizons,
@@ -92,32 +90,36 @@ function Events() {
       >
         {events.length > 0 ? (
           !isMobile ? (
-            <Chrono
-              className="h-96"
-              mode="VERTICAL_ALTERNATING"
-              items={events}
-              hideControls={true}
-              theme={{
-                primary: "#01ABFD",
-                secondary: "white",
-                cardBgColor: "white",
-                titleColor: "#01ABFD",
-                titleColorActive: "#01ABFD",
-              }}
-              fontSizes={{
-                title: "1rem",
-                cardTitle: "1.5rem",
-                cardSubtitle: "1rem",
-                cardText: "0.8rem",
-              }}
-              classNames={{
-                cardSubTitle: "my-card-subtitle",
-              }}
-            >
-              {events?.map((event) => eventItem(event))}
-            </Chrono>
+            <div>
+              <Title text="Upcoming Events" />
+              <Chrono
+                className="h-96"
+                mode="VERTICAL_ALTERNATING"
+                items={events}
+                hideControls={true}
+                theme={{
+                  primary: "#01ABFD",
+                  secondary: "white",
+                  cardBgColor: "white",
+                  titleColor: "#01ABFD",
+                  titleColorActive: "#01ABFD",
+                }}
+                fontSizes={{
+                  title: "1rem",
+                  cardTitle: "1.5rem",
+                  cardSubtitle: "1rem",
+                  cardText: "0.8rem",
+                }}
+                classNames={{
+                  cardSubTitle: "my-card-subtitle",
+                }}
+              >
+                {events?.map((event) => eventItem(event))}
+              </Chrono>
+            </div>
           ) : (
             <div>
+              <Title text="Upcoming Events" />
               {events?.map((event) => (
                 <div key={event.eventTitle} className="mb-10">
                   {eventItem(event)}{" "}

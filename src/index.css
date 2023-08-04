@@ -106,13 +106,13 @@ h1 .led-text {
 
 
 .globe-video {
-  transition: transform 2.3s ease;
+  transition: transform 2.4s ease;
   transform: scale(1);
 }
 
 @media (max-width: 467px) {
   .globe-video {
-    transform: scale(1.1);
+    transform: scale(1);
   }
 }
 
@@ -143,4 +143,13 @@ h1 .led-text {
 
 .social-icon:hover {
   color: theme('colors.highlight1') !important;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -10;
 }

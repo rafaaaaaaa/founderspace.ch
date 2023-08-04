@@ -8,10 +8,10 @@ function Landing() {
 
   function TitleSection() {
     return (
-      <div className="flex items-center h-[60vh] overflow-x-hidden sm:overflow-visible">
+      <div className="flex items-center justify-center h-[60vh]">
         <div className="w-full md:w-2/3 z-10 flex flex-col gap-4 items-center md:items-start">
           <h1 className="text-white text-4xl text-center md:text-start md:text-6xl font-bold fade-up-title">
-            Connecting <span className="swiss-text ">SWISS</span> startup experience with {" "}
+            Connecting <span className="">Swiss</span> startup experience with {" "}
             <span className="tracking-wide font-italic led-text">
               <Typewriter
                 words={["UZH", "students", "Zurich"]}
@@ -36,7 +36,7 @@ function Landing() {
           </a>
         </div>
 
-        <div className="absolute md:relative z-0 globe-video" dangerouslySetInnerHTML={{
+        <div className="absolute md:relative z-0 globe-video mb-16 md:mb-0" dangerouslySetInnerHTML={{
           __html: `
            <video
              loop
@@ -44,7 +44,7 @@ function Landing() {
              autoplay
              playsinline
              src="${require('../landingvideo.mp4')}"
-             class="z-30 globe-video" 
+             class="z-30" 
              width="max" 
              height="max"
            />,

@@ -39,7 +39,6 @@ root.render(
 
     <Particles
       id="tsparticles"
-      className="absolute top-0 left-0 w-full h-screen -z-10"
       init={particlesInit}
       options={{
         fullScreen: {

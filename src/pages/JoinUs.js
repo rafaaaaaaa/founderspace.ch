@@ -25,7 +25,7 @@ function JoinUs() {
   return (
     <div>
       <Title text="WHY JOIN US?" />
-      <ul className="text-white text-left mb-8 list-disc text-justify">
+      <ul className="text-white mb-8 list-disc text-justify">
         <p className="text-1xl">
           <b>1. Unparalleled Learning Opportunities:</b><br />
           Get inspired by industry leaders and successful entrepreneurs through our engaging speaker sessions and workshops. Learn the ins and outs of founding and scaling a startup, gaining practical knowledge for your future endeavors.
@@ -87,7 +87,7 @@ function JoinUs() {
           </div>
 
           <div className="flex justify-center mt-4">
-            <button type="submit" className="text-white w-full md:w-2/5 md:text-center bg-highlight2 hover:bg-highlight1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            <button type="submit" className="text-white md:w-2/5 md:text-center bg-highlight2 hover:bg-highlight1 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             >Submit Application</button>
           </div>
 

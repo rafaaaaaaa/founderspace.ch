@@ -4,26 +4,35 @@ import Hamburger from "hamburger-react";
 import Button from "./Button";
 import { useScrollDirection } from "../helpers/useScrollDirection";
 
-function Header() {
+function Header(props) {
   const [opened, setOpened] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const scrollDirection = useScrollDirection();
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
+
+    if (width > 780) {
+      props.blurBackgroundCallback(false);
+      setOpened(false);
+    }
   }
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, []);
+  });
 
   const isMobile = width <= 768;
 
   return (
-    <header className={`w-full sticky ${scrollDirection === "down" && !opened ? "-top-24" : "top-0"} h-24 transition-all duration-500 z-50`}>
-      <nav className="backdrop-blur-sm">
+    <header
+      className={`w-full sticky ${
+        scrollDirection === "down" && !opened ? "-top-24" : "top-0"
+      } h-24 transition-all duration-500 z-50`}
+    >
+      <nav id="nav" className="backdrop-blur-sm">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <a href="/" className="flex items-center">
             <img
@@ -40,7 +49,14 @@ function Header() {
             )}
           </a>
           <div className="inline-flex md:hidden">
-            <Hamburger toggled={opened} toggle={setOpened} color="white" />
+            <Hamburger
+              toggled={opened}
+              toggle={() => {
+                setOpened(!opened);
+                props.blurBackgroundCallback(!opened);
+              }}
+              color="white"
+            />
           </div>
 
           <div className="hidden w-full md:block md:w-auto z-50">
@@ -55,7 +71,11 @@ function Header() {
                 <Link href="board" title="Board" />
               </li>
               <li>
-                <Button className="text-white glow-button" href="join" text="Join Us" />
+                <Button
+                  className="text-white glow-button"
+                  href="join"
+                  text="Join Us"
+                />
               </li>
             </ul>
           </div>

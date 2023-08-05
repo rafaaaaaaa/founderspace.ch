@@ -7,7 +7,7 @@ function Partnerships() {
     <div className="flex flex-col gap-4">
       <div className="mb-24">
         <Title text="PARTNERSHIPS" />
-        <p className="text-white text-1xl text-left md:text-2xl mb-8 text-justify">
+        <p className="text-white text-1xl md:text-2xl mb-8 text-justify">
           FounderSpace is the bridge between the entrepreneurial world and our
           university students. Our club is dedicated to providing our members
           with the knowledge, skills, and connections they need to succeed in

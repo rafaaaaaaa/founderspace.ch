@@ -2,6 +2,7 @@ import "./../index.css";
 import { Typewriter } from "react-simple-typewriter";
 import SponsorsSection from "../sections/SponsorsSection";
 import NewsSection from "../sections/NewsSection";
+import Button from "../components/Button";
 
 function Landing() {
 
@@ -27,13 +28,7 @@ function Landing() {
           <h2 className="text-highlight1 text-1xl md:text-2xl font-medium fade-up-subtitle">
             Think big. Start small.
           </h2>
-          <a
-            href="events"
-            type="button"
-            className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text fade-up-button"
-          >
-            See Events
-          </a>
+          <Button href="events" text="See events"  className="text-white fade-up-text fade-up-button"/>
         </div>
 
         <div className="absolute md:relative z-0 globe-video mb-16 md:mb-0" dangerouslySetInnerHTML={{

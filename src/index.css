@@ -6,10 +6,12 @@
   font-family: "Switzer-Light";
   src: url("../public/fonts/Switzer-Light.otf");
 }
+
 @font-face {
   font-family: "Switzer-Medium";
   src: url("../public/fonts/Switzer-Medium.otf");
 }
+
 @font-face {
   font-family: "Switzer-Bold";
   src: url("../public/fonts/Switzer-Bold.otf");
@@ -152,4 +154,19 @@ h1 .led-text {
   height: 100%;
   left: 0;
   z-index: -10;
+}
+
+.glow-button {
+  color:white;
+}
+
+.glow-button:hover {
+  box-shadow: 0 1px 25px theme('colors.highlight1');
+}
+
+
+
+.glow-button-violet-on {
+  background-color: theme('colors.highlight2');
+  box-shadow: 0 1px 25px theme('colors.highlight2');
 }

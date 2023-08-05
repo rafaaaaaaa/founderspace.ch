@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import Title from "../components/Title";
 import SponsorsSection from "../sections/SponsorsSection";
 
@@ -20,13 +21,7 @@ function Partnerships() {
           forward to working together to achieve our shared goals.
           <br />
         </p>
-        <a
-          href="mailto:contact@foundespace.ch"
-          type="button"
-          className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text"
-        >
-          Get in touch
-        </a>
+        <Button href="mailto:contact@foundespace.ch" text="Get in touch" className="glow-button-violet-on " />
       </div>
 
       {SponsorsSection()}

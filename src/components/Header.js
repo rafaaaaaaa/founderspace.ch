@@ -55,7 +55,7 @@ function Header() {
                 <Link href="board" title="Board" />
               </li>
               <li>
-                <Button href="join" text="Join Us" />
+                <Button className="text-white glow-button" href="join" text="Join Us" />
               </li>
             </ul>
           </div>

@@ -7,7 +7,10 @@ module.exports = {
         primary: "#11081f",
         highlight1: "#01ABFD",
         highlight2: "#8027EB",
+        blue: "#01ABFD",
+        purple: "#8027EB"
       },
+      
     },
     fontFamily: {
       sans: ["ui-sans-serif"],

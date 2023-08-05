@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { getPartners } from "../helpers/contentfulClient";
+import Subtitle from "../components/Subtitle";
 
 function SponsorsSection() {
 
@@ -31,7 +32,7 @@ function SponsorsSection() {
       className={`w-full animated ${isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
         }`}
     >
-      <span className="text-highlight1 text-1xl">OUR PARTNERS</span>
+      <Subtitle text="Our Partners"/>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-16 my-8">
         {partners?.map((partner) => partnerItem(partner))}
       </div>

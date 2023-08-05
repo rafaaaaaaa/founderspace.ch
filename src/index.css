@@ -163,10 +163,3 @@ h1 .led-text {
 .glow-button:hover {
   box-shadow: 0 1px 25px theme('colors.highlight1');
 }
-
-
-
-.glow-button-violet-on {
-  background-color: theme('colors.highlight2');
-  box-shadow: 0 1px 25px theme('colors.highlight2');
-}

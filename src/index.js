@@ -13,6 +13,7 @@ import Board from "./pages/Board";
 import JoinUs from "./pages/JoinUs";
 import Events from "./pages/Events";
 import ParticlesBackground from "./components/ParticlesBackground";
+import NewsDetailPage from "./pages/NewsDetailPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -29,7 +30,6 @@ const blurBackground = async (state) => {
   }
 };
 
-
 root.render(
   <React.StrictMode>
     <div className="max-w-screen-xl flex flex-col items-center justify-between mx-auto p-4 gap-8">
@@ -42,6 +42,7 @@ root.render(
             <Route path="/partnerships" element={<Partnerships />}></Route>
             <Route path="/board" element={<Board />}></Route>
             <Route path="/join" element={<JoinUs />}></Route>
+            <Route path="/news/:id" element={<NewsDetailPage />} exact />
           </Routes>
         </BrowserRouter>
       </main>

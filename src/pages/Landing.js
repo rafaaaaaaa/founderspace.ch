@@ -6,7 +6,6 @@ import Button from "../components/Button";
 // import SocialsSection from "../sections/SocialsSection";
 
 function Landing() {
-
   function TitleSection() {
     return (
       <div className="flex items-center justify-center h-[60vh]">
@@ -60,8 +59,9 @@ function Landing() {
     <div className="flex flex-col gap-6 md:gap-16">
       {TitleSection()}
       {/* {SocialsSection()} */}
+
       {NewsSection()}
-      {SponsorsSection()}     
+      {SponsorsSection()}
     </div>
   );
 }

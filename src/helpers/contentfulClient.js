@@ -65,4 +65,21 @@ export const getBoardMembers = async () => {
       console.log(error);
     }
   };
+
+  export const getNewsById = async (id) => {
+    try {
+      const news = await client.getEntries({
+          content_type: "news"
+      });
+      const filteredNews = news.items.map((data) => {
+          const filteredNewsItem = data.fields;    
+          return filteredNewsItem;
+      })
+      const againFiltered = filteredNews.filter(x => x.id === id)[0];
+      return againFiltered;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
   

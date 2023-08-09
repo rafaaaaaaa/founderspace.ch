@@ -1,9 +1,9 @@
 import { Chrono } from "react-chrono";
 import "./../index.css";
-import { FaMapMarker } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { getEvents } from "../helpers/contentfulClient";
 import Title from '../components/Title';
+import Button from "../components/Button";
 
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -17,9 +17,14 @@ function Events() {
     getEvents().then((res) => {
       const transformedData = res.map((obj) => {
         const transformedDatetime = formatDate(obj.eventDatetime);
-        return { ...obj, title: transformedDatetime };
+        const weekDay = getWeekday(new Date(obj.eventDatetime));
+        return { ...obj, title: weekDay + ", " + transformedDatetime };
       });
-      setEvents(transformedData);
+
+      const sortedTransformedData = transformedData.sort(
+        (objA, objB) => Number(new Date(objA.eventDatetime)) - Number(new Date(objB.eventDatetime)),
+      );
+      setEvents(sortedTransformedData);
       setIsLoaded(true);
     });
 
@@ -35,39 +40,64 @@ function Events() {
     return date.toLocaleDateString("en-US", options);
   };
 
+  const formatDateNoYear = (dateString) => {
+    const options = { month: "short", day: "numeric" };
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-US", options);
+  };
+
+  const getWeekday = (date) => {
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var d = new Date(date);
+    var dayName = days[d.getDay()];
+    return dayName;
+  }
+
   const isMobile = width <= 768;
 
   function eventItem(event) {
     return (
-      <div className="bg-white rounded-lg overflow-hidden p-4" key={event.title}>
-        <div className="relative">
-          <img
-            className="rounded-t-lg object-contain w-64 h-64"
-            src={event.eventImage.fields.file.url}
-            alt={event.eventTitle}
-          />
-        </div>
+      <div class="wrapper antialiased text-gray-900" key={event.title}>
         <div>
-          <h5 className="mb-2 text-lg mb:text-xl font-bold text-primary">
-            {event.eventTitle}
-          </h5>
-          <div className="flex flex-row mb-3 items-center">
-            <FaMapMarker size={22} />
-            <p className="ml-3 text-sm mb:text-2xl font-medium text-black ">
-              {event.eventLocation}
-            </p>
+          <img src={event.eventImage.fields.file.url} alt="event" class="brightness-50 w-full rounded-lg shadow-md h-64 w-full object-cover" />
+          <div class="relative px-4 -mt-16  ">
+            <div class="glassy p-6 rounded-lg shadow-lg">
+              <div class="flex items-baseline">
+                <span class="bg-highlight1 text-white text-sm px-2 block rounded-full font-light">
+                  {formatDateNoYear(event.title)}
+                </span>
+
+                <div class="ml-2 text-gray-100 uppercase text-xs font-light tracking-wider">
+                  {event.eventLocation}
+                </div>
+              </div>
+              <h3 className="mt-1 text-xl text-ellipsis font-light text-white">{event.eventTitle}</h3>
+              <div class="mt-1 text-justify font-light text-white">
+                {event.eventDescription}
+                <span class="text-white text-sm"></span>
+              </div>
+              <div class="mt-4">
+                {
+                  event.signuprequired == true && (
+                    <Button
+                      className="text-white glow-button"
+                      href="join"
+                      text="Sign Up"
+                    />
+                  )
+                }
+
+                {
+                  event.signuprequired == false && (
+                    <div class="mt-1 text-justify font-light text-highlight1">
+                      no sign up required
+                    </div>
+                  )
+                }
+              </div>
+            </div>
           </div>
 
-          <p className="mb-3 text-sm md:text-md font-light text-black">
-            {event.eventDescription}
-          </p>
-          <a
-            href={event.signUpUrl}
-            type="button"
-            className="text-white bg-highlight2 rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text"
-          >
-            Sign Up
-          </a>
         </div>
       </div>
     );
@@ -100,7 +130,7 @@ function Events() {
                 theme={{
                   primary: "#01ABFD",
                   secondary: "white",
-                  cardBgColor: "white",
+                  cardBgColor: "transparent",
                   titleColor: "#01ABFD",
                   titleColorActive: "#01ABFD",
                 }}

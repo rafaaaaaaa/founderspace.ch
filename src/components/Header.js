@@ -37,19 +37,18 @@ function Header(props) {
             <div className="flex flex-col">
               <img
                 src={require("../founderspace-logo.png")}
-                className="h-16 mr-3"
+                className="h-14 mr-3"
                 alt="FounderSpace Logo"
               />
-              <p className="-mt-3 uppercase text-white font-uzh text-sm">University Of Zurich</p>
+              {opened && isMobile && (
+                <img
+                  src={require("../founderspace-logo.png")}
+                  className="h-14 mr-3 absolute logo-glow"
+                  alt="FounderSpace Logo"
+                />
+              )}
+              <p className=" uppercase text-white font-uzh text-sm">University Of Zurich</p>
             </div>
-
-            {opened && isMobile && (
-              <img
-                src={require("../founderspace-logo.png")}
-                className="h-16 mr-3 absolute logo-glow"
-                alt="FounderSpace Logo"
-              />
-            )}
           </a>
           <div className="inline-flex md:hidden">
             <Hamburger

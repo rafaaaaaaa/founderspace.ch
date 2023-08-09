@@ -12,7 +12,7 @@ function Landing() {
         <div className="w-full md:w-2/3 z-10 flex flex-col gap-4 items-center md:items-start">
           <h1 className="text-white text-4xl text-center md:text-start md:text-6xl font-bold fade-up-title">
             Connecting <span className="">Swiss</span> startup experience with{" "}
-            <span className="tracking-wide font-italic led-text">
+            <span className="tracking-wide font-italic led-text-weak md:led-text-strong">
               <Typewriter
                 words={["UZH", "students", "Zurich"]}
                 loop={100}

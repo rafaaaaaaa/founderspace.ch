@@ -28,18 +28,21 @@ function Header(props) {
 
   return (
     <header
-      className={`w-full sticky ${
-        scrollDirection === "down" && !opened ? "-top-24" : "top-0"
-      } h-24 transition-all duration-500 z-50`}
+      className={`w-full sticky ${scrollDirection === "down" && !opened ? "-top-24" : "top-0"
+        } h-24 transition-all duration-500 z-50`}
     >
       <nav id="nav" className="backdrop-blur-sm">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <a href="/" className="flex items-center">
-            <img
-              src={require("../founderspace-logo.png")}
-              className="h-16 mr-3"
-              alt="FounderSpace Logo"
-            />
+            <div className="flex flex-col">
+              <img
+                src={require("../founderspace-logo.png")}
+                className="h-16 mr-3"
+                alt="FounderSpace Logo"
+              />
+              <p className="-mt-3 uppercase text-white font-uzh text-sm">University Of Zurich</p>
+            </div>
+
             {opened && isMobile && (
               <img
                 src={require("../founderspace-logo.png")}

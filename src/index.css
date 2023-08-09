@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "TheSans";
+  src: url("../public/fonts/TheSans.otf");
+}
+
+@font-face {
   font-family: "Switzer-Light";
   src: url("../public/fonts/Switzer-Light.otf");
 }

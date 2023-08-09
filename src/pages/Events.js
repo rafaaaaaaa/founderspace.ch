@@ -57,26 +57,26 @@ function Events() {
 
   function eventItem(event) {
     return (
-      <div class="wrapper antialiased text-gray-900" key={event.title}>
+      <div className="wrapper antialiased text-gray-900" key={event.title}>
         <div>
-          <img src={event.eventImage.fields.file.url} alt="event" class="brightness-50 w-full rounded-lg shadow-md h-64 w-full object-cover" />
-          <div class="relative px-4 -mt-16  ">
-            <div class="glassy p-6 rounded-lg shadow-lg">
-              <div class="flex items-baseline">
-                <span class="bg-highlight1 text-white text-sm px-2 block rounded-full font-light">
+          <img src={event.eventImage.fields.file.url} alt="event" className="brightness-50 w-full rounded-lg shadow-md h-64 w-full object-cover" />
+          <div className="relative px-4 -mt-16  ">
+            <div className="glassy p-6 rounded-lg shadow-lg">
+              <div className="flex items-baseline">
+                <span className="bg-highlight1 text-white text-sm px-2 block rounded-full font-light">
                   {formatDateNoYear(event.title)}
                 </span>
 
-                <div class="ml-2 text-gray-100 uppercase text-xs font-light tracking-wider">
+                <div className="ml-2 text-gray-100 uppercase text-xs font-light tracking-wider">
                   {event.eventLocation}
                 </div>
               </div>
               <h3 className="mt-1 text-xl text-ellipsis font-light text-white">{event.eventTitle}</h3>
-              <div class="mt-1 text-justify font-light text-white">
+              <div className="mt-1 text-justify font-light text-white">
                 {event.eventDescription}
-                <span class="text-white text-sm"></span>
+                <span className="text-white text-sm"></span>
               </div>
-              <div class="mt-4">
+              <div className="mt-4">
                 {
                   event.signuprequired == true && (
                     <Button
@@ -89,7 +89,7 @@ function Events() {
 
                 {
                   event.signuprequired == false && (
-                    <div class="mt-1 text-justify font-light text-highlight1">
+                    <div className="mt-1 text-justify font-light text-highlight1">
                       no sign up required
                     </div>
                   )

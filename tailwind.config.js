@@ -18,6 +18,7 @@ module.exports = {
       medium: ["Switzer-Medium", "Switzer-Medium"],
       bold: ["Switzer-Bold", "Switzer-Bold"],
       italic: ["Switzer-Light-Italic", "Switzer-Light-Italic"],
+      uzh: ["TheSans", "TheSans"],
     },
   },
   plugins: [require("tailwindcss-animated"),   require('@tailwindcss/line-clamp')],

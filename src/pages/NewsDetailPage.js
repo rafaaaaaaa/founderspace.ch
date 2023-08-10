@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Title from "../components/Title";
-import { FaChevronLeft } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { getNewsById } from "../helpers/contentfulClient";
 import { useState } from "react";
@@ -18,19 +17,14 @@ function NewsDetailPage() {
       top: 0,
       behavior: "smooth",
     });
-  }, []);
+  }, [id]);
 
   return (
     <div>
       {newsItem !== undefined && newsItem !== null && (
-
-
         <div className="h-min-screen w-full md:w-2/3 grid items-center">
 
           <Title text={newsItem.title} withBackButton={true} />
-
-
-
           <div className="justify-self-center">
             <img
               src={newsItem.image.fields.file.url}

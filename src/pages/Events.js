@@ -3,7 +3,6 @@ import "./../index.css";
 import { useEffect, useState } from "react";
 import { getEvents } from "../helpers/contentfulClient";
 import Title from '../components/Title';
-import Button from "../components/Button";
 
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -78,17 +77,19 @@ function Events() {
               </div>
               <div className="mt-4">
                 {
-                  event.signuprequired == true && (
-                    <Button
-                      className="text-white glow-button"
-                      href="join"
-                      text="Sign Up"
-                    />
+                  event.signuprequired === true && (
+                    <a
+                      href={event.signUpUrl}
+                      type="button"
+                      className={"glow-button text-white bg-gradient-to-r from-blue to-purple rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text "}
+                    >
+                      Sign Up
+                    </a>
                   )
                 }
 
                 {
-                  event.signuprequired == false && (
+                  event.signuprequired === false && (
                     <div className="mt-1 text-justify font-light text-highlight1">
                       no sign up required
                     </div>

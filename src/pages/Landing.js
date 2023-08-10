@@ -3,7 +3,6 @@ import { Typewriter } from "react-simple-typewriter";
 import SponsorsSection from "../sections/SponsorsSection";
 import NewsSection from "../sections/NewsSection";
 import Button from "../components/Button";
-// import SocialsSection from "../sections/SocialsSection";
 
 function Landing() {
   function TitleSection() {

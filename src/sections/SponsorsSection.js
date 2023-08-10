@@ -19,7 +19,7 @@ function SponsorsSection() {
     return (
       <a href={partner.websiteurl} className="flex items-center" key={partner.name}>
         <img
-          className="w-56 rounded-lg shadow-xl dark:shadow-gray-800"
+          className="w-56"
           src={partner.logo.fields.file.url}
           alt={partner.altText}
         />

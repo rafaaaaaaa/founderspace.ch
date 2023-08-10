@@ -47,7 +47,7 @@ function Header(props) {
                   alt="FounderSpace Logo"
                 />
               )}
-              <p className=" uppercase text-white font-uzh text-sm">University Of Zurich</p>
+              <p className="uppercase text-white font-uzh text-sm">University Of Zurich</p>
             </div>
           </a>
           <div className="inline-flex md:hidden">

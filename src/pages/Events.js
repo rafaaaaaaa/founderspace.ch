@@ -61,13 +61,14 @@ function Events() {
           <img src={event.eventImage.fields.file.url} alt="event" className="brightness-50 w-full rounded-lg shadow-md h-64 w-full object-cover" />
           <div className="relative px-4 -mt-16  ">
             <div className="glassy p-6 rounded-lg shadow-lg">
-              <div className="flex items-baseline">
-                <span className="bg-highlight1 text-white text-sm px-2 block rounded-full font-light">
+              <div className="flex flex-row gap-2 items-center">
+                <span className="bg-highlight1 text-white text-sm px-2 rounded-full font-light flex-none">
                   {formatDateNoYear(event.title)}
                 </span>
-
-                <div className="ml-2 text-gray-100 uppercase text-xs font-light tracking-wider">
-                  {event.eventLocation}
+                <div className="shrink">
+                  <div className="text-gray-100 uppercase text-xs font-light tracking-wider">
+                    {event.eventLocation}
+                  </div>
                 </div>
               </div>
               <h3 className="mt-1 text-xl text-ellipsis font-light text-white">{event.eventTitle}</h3>

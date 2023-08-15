@@ -5,8 +5,7 @@ function Button(props) {
   return (
     <a
       href={props.href}
-      type="button"
-      className={"glow-button text-white bg-gradient-to-r from-blue to-purple rounded-lg text-sm py-2.5 text-center w-32 font-medium " + (shouldFadeup ? 'fade-up-text fade-up-button' : '')}
+      className={"glow-button px-8 py-2.5 text-white bg-gradient-to-r from-blue to-purple rounded-lg text-sm text-center font-medium " + (shouldFadeup ? 'fade-up-text fade-up-button' : '')}
     >
       {props.text}
     </a>

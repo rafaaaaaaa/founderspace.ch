@@ -130,7 +130,7 @@ function Events() {
                 hideControls={true}
                 theme={{
                   primary: "#01ABFD",
-                  secondary: "white",
+                  secondary: "transparent",
                   cardBgColor: "transparent",
                   titleColor: "#01ABFD",
                   titleColorActive: "#01ABFD",

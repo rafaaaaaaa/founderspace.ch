@@ -27,6 +27,7 @@ function Partnerships() {
           href="mailto:contact@foundespace.ch"
           text="Get in touch"
         />
+
       </div>
 
       {SponsorsSection()}

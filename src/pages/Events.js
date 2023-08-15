@@ -1,8 +1,10 @@
+import "../index.css"
 import { Chrono } from "react-chrono";
-import "./../index.css";
 import { useEffect, useState } from "react";
 import { getEvents } from "../helpers/contentfulClient";
 import Title from '../components/Title';
+import Button from "../components/Button";
+
 
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -79,13 +81,10 @@ function Events() {
               <div className="mt-4">
                 {
                   event.signuprequired === true && (
-                    <a
+                    <Button
                       href={event.signUpUrl}
-                      type="button"
-                      className={"glow-button text-white bg-gradient-to-r from-blue to-purple rounded-lg text-sm py-2.5 text-center w-32 font-medium fade-up-text "}
-                    >
-                      Sign Up
-                    </a>
+                      text="Sign Up"
+                    />
                   )
                 }
 

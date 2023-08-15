@@ -1,4 +1,4 @@
-import "./../index.css";
+import "../index.css"
 import { Typewriter } from "react-simple-typewriter";
 import SponsorsSection from "../sections/SponsorsSection";
 import NewsSection from "../sections/NewsSection";
@@ -29,7 +29,7 @@ function Landing() {
           <Button
             href="events"
             text="See events"
-            className="text-white fade-up-text fade-up-button"
+            fadeup="yes"
           />
         </div>
 

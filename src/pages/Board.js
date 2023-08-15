@@ -1,6 +1,7 @@
 import { FaLinkedin } from "react-icons/fa";
 import { getBoardMembers } from "../helpers/contentfulClient";
 import { useEffect, useState } from "react";
+import "./../index.css";
 
 function Board() {
   const [boardMembers, setBoardMembers] = useState([]);

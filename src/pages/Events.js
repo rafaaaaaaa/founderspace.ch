@@ -132,8 +132,8 @@ function Events() {
                   primary: "#01ABFD",
                   secondary: "transparent",
                   cardBgColor: "transparent",
-                  titleColor: "#01ABFD",
-                  titleColorActive: "#01ABFD",
+                  titleColor: "	#FFFFFF",
+                  titleColorActive: "	#FFFFFF",
                 }}
                 fontSizes={{
                   title: "1rem",

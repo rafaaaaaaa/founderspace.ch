@@ -3,8 +3,14 @@ import { Typewriter } from "react-simple-typewriter";
 import SponsorsSection from "../sections/SponsorsSection";
 import NewsSection from "../sections/NewsSection";
 import Button from "../components/Button";
+import { useEffect } from "react";
 
 function Landing() {
+
+  useEffect(() => {
+    document.title = "FounderSpace | Welcome ";   
+  }, []);
+
   function TitleSection() {
     return (
       <div className="flex items-center justify-center h-[60vh]">

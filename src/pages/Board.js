@@ -8,6 +8,7 @@ function Board() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    document.title = "FounderSpace | Board";
     getBoardMembers().then((res) => {
       setBoardMembers(res.sort((a, b) => a.order - b.order));
       setIsLoaded(true);

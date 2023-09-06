@@ -2,8 +2,13 @@ import "../index.css";
 import Title from "../components/Title";
 import SponsorsSection from "../sections/SponsorsSection";
 import Button from "../components/Button";
+import { useEffect } from "react";
 
 function Partnerships() {
+  useEffect(() => {
+    document.title = "FounderSpace | Partnership";
+  });
+
   return (
     <div className="flex flex-col gap-4">
       <div className="mb-24">

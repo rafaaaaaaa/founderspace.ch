@@ -27,7 +27,7 @@ function Footer() {
                 <FaLinkedin className="social-icon" color="white" size={24} />
               </a>
               <a href="https://www.instagram.com/founderspace.ch/">
-                <FaInstagram className="social-icon" color="white"  size={24} />
+                <FaInstagram className="social-icon" color="white" size={24} />
               </a>
             </div>
           </div>
@@ -51,20 +51,22 @@ function Footer() {
           <div>
             <h4 className="text-highlight1 mb-4 font-medium">CONTACT</h4>
             <p className="text-white text-sm font-light">
-              University Of Zurich <br />
-              Rämistrasse 71, 8006 Zurich
+              FounderSpace at the University of Zurich <br />
+              c/o Impulsfabrik <br />
+              Rämistrasse 3<br />
+              8005 Zürich <br />
               <br />
-              Switzerland <br />
-              <br />
-              <a className="underline" href="mailto:contact@founderspace.ch">contact@founderspace.ch</a>
+              <a className="underline" href="mailto:contact@founderspace.ch">
+                contact@founderspace.ch
+              </a>
               <br />
             </p>
           </div>
         </div>
         <div className="w-full py-8 md:py-16 flex items-center justify-center text-white font-light text-sm">
           <p>
-            &copy; {currentYear} FounderSpace University Of Zurich. All Rights
-            Reserved.
+            &copy; {currentYear} FounderSpace, All
+            Rights Reserved.
           </p>
         </div>
       </footer>

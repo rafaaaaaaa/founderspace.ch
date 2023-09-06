@@ -38,6 +38,7 @@ function App() {
               <Route path="/board" element={<Board />}></Route>
               <Route path="/join" element={<JoinUs />}></Route>
               <Route path="/news/:id" element={<NewsDetailPage />} exact />
+              <Route path="*" element={<Landing />} exact />
             </Routes>
           </BrowserRouter>
         </main>

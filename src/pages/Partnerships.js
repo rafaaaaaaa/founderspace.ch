@@ -1,8 +1,7 @@
-import "../index.css"
+import "../index.css";
 import Title from "../components/Title";
 import SponsorsSection from "../sections/SponsorsSection";
 import Button from "../components/Button";
-
 
 function Partnerships() {
   return (
@@ -16,18 +15,14 @@ function Partnerships() {
           today's competitive business environment.
           <br />
           <br />
-          With your support as a sponsor, we can continue to offer valuable
+          With your support as a partner, we can continue to offer valuable
           programming and resources to our students, and help to promote the
           growth and success of the entrepreneurial community at our university.
-          We would be honored to have your organization as a sponsor and look
+          We would be honored to have your organization as a partner and look
           forward to working together to achieve our shared goals.
           <br />
         </p>
-        <Button
-          href="mailto:contact@foundespace.ch"
-          text="Get in touch"
-        />
-
+        <Button href="mailto:contact@foundespace.ch" text="Get in touch" />
       </div>
 
       {SponsorsSection()}

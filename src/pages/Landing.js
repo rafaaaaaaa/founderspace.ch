@@ -13,13 +13,13 @@ function Landing() {
             Connecting <span className="">Swiss</span> startup experience with{" "}
             <span className="tracking-wide font-italic led-text-weak md:led-text-strong">
               <Typewriter
-                words={["UZH", "students", "Zurich"]}
-                loop={100}
+                words={["#UZH", "students", "#UZH", "YOU"]}
+                loop={false}
                 cursor
                 cursorStyle="_"
-                typeSpeed={150}
-                deleteSpeed={150}
-                delaySpeed={1000}
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={2000}
               />
             </span>
           </h1>

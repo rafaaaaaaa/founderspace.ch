@@ -10,14 +10,20 @@ function NewsDetailPage() {
   const { id } = useParams();
   const [newsItem, setNewsItem] = useState();
   useEffect(() => {
+    
     getNewsById(id).then((res) => {
       setNewsItem(res);
+      document.title = "FounderSpace | " + res.title;   
     });
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   }, [id]);
+
+  useEffect(() => {
+   
+  }, []);
 
   return (
     <div>

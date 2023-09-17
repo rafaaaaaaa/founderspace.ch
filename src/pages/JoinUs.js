@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Title from '../components/Title';
 
@@ -21,6 +21,10 @@ function JoinUs() {
         alert(error.text)
       });
   };
+
+  useEffect(() => {
+    document.title = "FounderSpace | Join Us";   
+  }, []);
 
   return (
     <div>

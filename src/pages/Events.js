@@ -1,10 +1,9 @@
-import "../index.css"
+import "../index.css";
 import { Chrono } from "react-chrono";
 import { useEffect, useState } from "react";
 import { getEvents } from "../helpers/contentfulClient";
-import Title from '../components/Title';
+import Title from "../components/Title";
 import Button from "../components/Button";
-
 
 function Events() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -15,6 +14,7 @@ function Events() {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
+    document.title = "FounderSpace | Events";
     getEvents().then((res) => {
       const transformedData = res.map((obj) => {
         const transformedDatetime = formatDate(obj.eventDatetime);
@@ -23,7 +23,9 @@ function Events() {
       });
 
       const sortedTransformedData = transformedData.sort(
-        (objA, objB) => Number(new Date(objA.eventDatetime)) - Number(new Date(objB.eventDatetime)),
+        (objA, objB) =>
+          Number(new Date(objA.eventDatetime)) -
+          Number(new Date(objB.eventDatetime))
       );
       setEvents(sortedTransformedData);
       setIsLoaded(true);
@@ -48,11 +50,19 @@ function Events() {
   };
 
   const getWeekday = (date) => {
-    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
     var d = new Date(date);
     var dayName = days[d.getDay()];
     return dayName;
-  }
+  };
 
   const isMobile = width <= 768;
 
@@ -60,7 +70,11 @@ function Events() {
     return (
       <div className="wrapper antialiased text-gray-900" key={event.title}>
         <div>
-          <img src={event.eventImage.fields.file.url} alt="event" className="brightness-50 w-full rounded-lg shadow-md h-64 w-full object-cover" />
+          <img
+            src={event.eventImage.fields.file.url}
+            alt="event"
+            className="brightness-50 w-full rounded-lg shadow-md h-64 w-full object-cover"
+          />
           <div className="relative px-4 -mt-16  ">
             <div className="glassy p-6 rounded-lg shadow-lg">
               <div className="flex flex-row gap-2 items-center">
@@ -73,32 +87,26 @@ function Events() {
                   </div>
                 </div>
               </div>
-              <h3 className="mt-1 text-xl text-ellipsis font-light text-white">{event.eventTitle}</h3>
+              <h3 className="mt-1 text-xl text-ellipsis font-light text-white">
+                {event.eventTitle}
+              </h3>
               <div className="mt-1 text-justify font-light text-white">
                 {event.eventDescription}
                 <span className="text-white text-sm"></span>
               </div>
               <div className="mt-4">
-                {
-                  event.signuprequired === true && (
-                    <Button
-                      href={event.signUpUrl}
-                      text="Sign Up"
-                    />
-                  )
-                }
+                {event.signuprequired === true && (
+                  <Button href={event.signUpUrl} text="Sign Up" />
+                )}
 
-                {
-                  event.signuprequired === false && (
-                    <div className="mt-1 text-justify font-light text-highlight1">
-                      no sign up required
-                    </div>
-                  )
-                }
+                {event.signuprequired === false && (
+                  <div className="mt-1 text-justify font-light text-highlight1">
+                    no sign up required
+                  </div>
+                )}
               </div>
             </div>
           </div>
-
         </div>
       </div>
     );
@@ -116,8 +124,9 @@ function Events() {
         <span className="text-highlight1">We are happy to welcome you.</span>
       </p>
       <div
-        className={`h-max w-full animated ${isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
-          }`}
+        className={`h-max w-full animated ${
+          isLoaded ? "animate-fade-up animate-delay-300 animate-once" : ""
+        }`}
       >
         {events.length > 0 ? (
           !isMobile ? (

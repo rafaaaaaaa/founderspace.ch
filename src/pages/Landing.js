@@ -3,8 +3,14 @@ import { Typewriter } from "react-simple-typewriter";
 import SponsorsSection from "../sections/SponsorsAndPartnersSection";
 import NewsSection from "../sections/NewsSection";
 import Button from "../components/Button";
+import { useEffect } from "react";
 
 function Landing() {
+
+  useEffect(() => {
+    document.title = "FounderSpace | Welcome ";   
+  }, []);
+
   function TitleSection() {
     return (
       <div className="flex items-center justify-center h-[60vh]">
@@ -13,13 +19,13 @@ function Landing() {
             Connecting <span className="">Swiss</span> startup experience with{" "}
             <span className="tracking-wide font-italic led-text-weak md:led-text-strong">
               <Typewriter
-                words={["UZH", "students", "Zurich"]}
-                loop={100}
+                words={["#UZH", "students", "#UZH", "YOU"]}
+                loop={false}
                 cursor
                 cursorStyle="_"
-                typeSpeed={150}
-                deleteSpeed={150}
-                delaySpeed={1000}
+                typeSpeed={100}
+                deleteSpeed={50}
+                delaySpeed={2000}
               />
             </span>
           </h1>

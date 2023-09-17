@@ -28,12 +28,13 @@ function Header(props) {
 
   return (
     <header
-      className={`w-full sticky ${scrollDirection === "down" && !opened ? "-top-24" : "top-0"
-        } h-24 transition-all duration-500 z-50`}
+      className={`w-full sticky ${
+        scrollDirection === "down" && !opened ? "-top-24" : "top-0"
+      } h-24 transition-all duration-500 z-50`}
     >
       <nav id="nav" className="backdrop-blur-sm">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex flex-col justify-center">
             <div className="flex flex-col">
               <img
                 src={require("../founderspace-logo.png")}
@@ -47,8 +48,10 @@ function Header(props) {
                   alt="FounderSpace Logo"
                 />
               )}
-              <p className="uppercase text-white font-uzh text-sm">University Of Zurich</p>
             </div>
+            <p className="uppercase text-white mt-1 font-uzh text-xs">
+              Student Association | University of Zurich
+            </p>
           </a>
           <div className="inline-flex md:hidden">
             <Hamburger

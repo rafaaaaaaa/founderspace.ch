@@ -1,10 +1,14 @@
-import "../index.css"
+import "../index.css";
 import Title from "../components/Title";
 import SponsorsSection from "../sections/SponsorsAndPartnersSection";
 import Button from "../components/Button";
-
+import { useEffect } from "react";
 
 function Partnerships() {
+  useEffect(() => {
+    document.title = "FounderSpace | Partnership";
+  });
+
   return (
     <div className="flex flex-col gap-4">
       <div className="mb-24">
@@ -16,10 +20,10 @@ function Partnerships() {
           today's competitive business environment.
           <br />
           <br />
-          With your support as a sponsor, we can continue to offer valuable
+          With your support as a partner, we can continue to offer valuable
           programming and resources to our students, and help to promote the
           growth and success of the entrepreneurial community at our university.
-          We would be honored to have your organization as a sponsor and look
+          We would be honored to have your organization as a partner and look
           forward to working together to achieve our shared goals.
           <br />
         </p>

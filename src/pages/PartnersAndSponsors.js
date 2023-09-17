@@ -12,7 +12,7 @@ function Partnerships() {
   return (
     <div className="flex flex-col gap-4">
       <div className="mb-24">
-        <Title text="PARTNERSHIPS" />
+        <Title text="WE'D LOVE TO COLLABORATE WITH YOU" />
         <p className="text-white text-1xl md:text-2xl mb-8 text-justify">
           FounderSpace is the bridge between the entrepreneurial world and our
           university students. Our club is dedicated to providing our members
@@ -20,10 +20,10 @@ function Partnerships() {
           today's competitive business environment.
           <br />
           <br />
-          With your support as a partner, we can continue to offer valuable
+          With your support as a partner or sponsor, we can continue to offer valuable
           programming and resources to our students, and help to promote the
           growth and success of the entrepreneurial community at our university.
-          We would be honored to have your organization as a partner and look
+          We would be honored to have your organization as as a partner or sponsor and look
           forward to working together to achieve our shared goals.
           <br />
         </p>

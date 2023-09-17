@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Landing from "./pages/Landing";
-import Partnerships from "./pages/Partnerships";
+import PartnersAndSponsors from "./pages/PartnersAndSponsors";
 import Board from "./pages/Board";
 import JoinUs from "./pages/JoinUs";
 import Events from "./pages/Events";
@@ -34,7 +34,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Landing />}></Route>
               <Route path="/events" element={<Events />}></Route>
-              <Route path="/partnerships" element={<Partnerships />}></Route>
+              <Route path="/partnersandsponsors" element={<PartnersAndSponsors />}></Route>
               <Route path="/board" element={<Board />}></Route>
               <Route path="/join" element={<JoinUs />}></Route>
               <Route path="/news/:id" element={<NewsDetailPage />} exact />

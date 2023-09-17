@@ -70,7 +70,7 @@ function Header(props) {
                 <Link href="events" title="Events" />
               </li>
               <li>
-                <Link href="partnerships" title="Partnerships" />
+                <Link href="partnersandsponsors" title="Partners & Sponsors" />
               </li>
               <li>
                 <Link href="board" title="Board" />
@@ -92,7 +92,7 @@ function Header(props) {
                   <Link href="events" title="Events" />
                 </li>
                 <li>
-                  <Link href="partnerships" title="Partnerships" />
+                  <Link href="partnersandsponsors" title="Partners & Sponsors" />
                 </li>
                 <li>
                   <Link href="board" title="Board" />

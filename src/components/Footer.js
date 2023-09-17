@@ -38,7 +38,7 @@ function Footer() {
                 <FooterLink title="Events" href="events" />
               </li>
               <li className="flex flex-row  items-center mb-1">
-                <FooterLink title="Partnerships" href="partnerships" />
+                <FooterLink title="Partners & Sponsors" href="partnersandsponsors" />
               </li>
               <li className="flex flex-row  items-center mb-1">
                 <FooterLink title="Board" href="board" />

@@ -6,7 +6,7 @@ function Title(props) {
   var notunderlinedTitle = title.substring(title.length - 2, title.length);
   return (
 
-    <h1 className="relative inline-block bg-gradient-to-r text-white font-medium text-2xl md:text-2xl mb-8 tracking-wider">
+    <h1 className="relative inline-block bg-gradient-to-r text-white text-2xl md:text-2xl mb-8 tracking-wider md:font-light">
 
       {
         props.withBackButton && (

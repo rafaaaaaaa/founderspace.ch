@@ -1,6 +1,6 @@
 import "../index.css"
 import { Typewriter } from "react-simple-typewriter";
-import SponsorsSection from "../sections/SponsorsSection";
+import SponsorsSection from "../sections/SponsorsAndPartnersSection";
 import NewsSection from "../sections/NewsSection";
 import Button from "../components/Button";
 

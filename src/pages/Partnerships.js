@@ -1,6 +1,6 @@
 import "../index.css"
 import Title from "../components/Title";
-import SponsorsSection from "../sections/SponsorsSection";
+import SponsorsSection from "../sections/SponsorsAndPartnersSection";
 import Button from "../components/Button";
 
 
@@ -26,8 +26,8 @@ function Partnerships() {
         <Button
           href="mailto:contact@foundespace.ch"
           text="Get in touch"
-        />
-
+        />       
+      
       </div>
 
       {SponsorsSection()}

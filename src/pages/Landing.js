@@ -7,9 +7,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 function Landing() {
-  const [hasCookieBot, setHasCookieBot] = useState(undefined);
-  const domainGroupId = 'ecff8d69-d1cb-416f-a86f-ba55b3f38707';
-
   useEffect(() => {
     document.title = "FounderSpace | Welcome ";
 

@@ -4,7 +4,6 @@ import SponsorsSection from "../sections/SponsorsAndPartnersSection";
 import NewsSection from "../sections/NewsSection";
 import Button from "../components/Button";
 import { useEffect } from "react";
-import { useState } from "react";
 
 function Landing() {
   useEffect(() => {

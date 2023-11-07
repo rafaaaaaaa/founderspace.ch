@@ -10,6 +10,8 @@ import JoinUs from "./pages/JoinUs";
 import Events from "./pages/Events";
 import ParticlesBackground from "./components/ParticlesBackground";
 import NewsDetailPage from "./pages/NewsDetailPage";
+import Impressum from "./pages/Impressum";
+import Privacy from "./pages/Privacy";
 
 function App() {
   const blurBackground = async (state) => {
@@ -37,6 +39,8 @@ function App() {
               <Route path="/partnersandsponsors" element={<PartnersAndSponsors />}></Route>
               <Route path="/board" element={<Board />}></Route>
               <Route path="/join" element={<JoinUs />}></Route>
+              <Route path="/impressum" element={<Impressum />}></Route>
+              <Route path="/privacy" element={<Privacy />}></Route>
               <Route path="/news/:id" element={<NewsDetailPage />} exact />
               <Route path="*" element={<Landing />} exact />
             </Routes>

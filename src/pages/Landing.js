@@ -4,11 +4,15 @@ import SponsorsSection from "../sections/SponsorsAndPartnersSection";
 import NewsSection from "../sections/NewsSection";
 import Button from "../components/Button";
 import { useEffect } from "react";
+import { useState } from "react";
 
 function Landing() {
+  const [hasCookieBot, setHasCookieBot] = useState(undefined);
+  const domainGroupId = 'ecff8d69-d1cb-416f-a86f-ba55b3f38707';
 
   useEffect(() => {
-    document.title = "FounderSpace | Welcome ";   
+    document.title = "FounderSpace | Welcome ";
+
   }, []);
 
   function TitleSection() {

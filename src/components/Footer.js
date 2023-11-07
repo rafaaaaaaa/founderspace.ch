@@ -46,6 +46,15 @@ function Footer() {
               <li className="flex flex-row  items-center mb-1">
                 <FooterLink title="Join Us" href="join" />
               </li>
+              <li className="flex flex-row  items-center mb-1">
+                <FooterLink title="Legal Notice, Impressum" href="Impressum" />
+              </li>
+              <li className="flex flex-row  items-center mb-1">
+                <FooterLink title="Privacy Policy" href="privacy" />
+              </li>
+              <li className="flex flex-row  items-center mb-1">
+                <FooterLink title="Cookie Policy" href="cookies" />
+              </li>
             </ul>
           </div>
           <div>

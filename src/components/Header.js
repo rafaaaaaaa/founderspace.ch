@@ -98,7 +98,7 @@ function Header(props) {
                   <Link href="board" title="Board" />
                 </li>
                 <li>
-                  <Link href="join" title="Join Us" />
+                  <Link href="stayinformed" title="Stay Informed" />
                 </li>
               </ul>
             </div>

@@ -78,8 +78,8 @@ function Header(props) {
               <li>
                 <Button
                   className="text-white glow-button"
-                  href="join"
-                  text="Join Us"
+                  href="stayinformed"
+                  text="Stay Informed"
                 />
               </li>
             </ul>

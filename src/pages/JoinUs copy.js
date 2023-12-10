@@ -23,7 +23,7 @@ function JoinUs() {
   };
 
   useEffect(() => {
-    document.title = "FounderSpace | Join Us";   
+    document.title = "FounderSpace | Stay Informed";   
   }, []);
 
   return (

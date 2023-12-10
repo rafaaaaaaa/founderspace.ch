@@ -24,11 +24,12 @@ function Events() {
 
       const sortedTransformedData = transformedData.sort(
         (objA, objB) =>
-          Number(new Date(objA.eventDatetime)) -
-          Number(new Date(objB.eventDatetime))
+          Number(new Date(objB.eventDatetime)) -
+          Number(new Date(objA.eventDatetime))
       );
       setEvents(sortedTransformedData);
       setIsLoaded(true);
+      console.log(sortedTransformedData);
     });
 
     window.addEventListener("resize", handleWindowSizeChange);
@@ -73,7 +74,7 @@ function Events() {
           <img
             src={event.eventImage.fields.file.url}
             alt="event"
-            className="brightness-50 w-full rounded-lg shadow-md h-64 w-full object-cover"
+            className="brightness-50 rounded-lg shadow-md h-64 w-full object-cover"
           />
           <div className="relative px-4 -mt-16  ">
             <div className="glassy p-6 rounded-lg shadow-lg">
@@ -98,11 +99,16 @@ function Events() {
                 {event.signuprequired === true && (
                   <Button href={event.signUpUrl} text="Sign Up" />
                 )}
-
-                {event.signuprequired === false && (
-                  <div className="mt-1 text-justify font-light text-highlight1">
-                    no sign up required
-                  </div>
+                {new Date(event.eventDatetime) >= new Date() &&
+                  event.signuprequired === false && (
+                    <div className="mt-1 text-justify font-light text-highlight1">
+                      no sign up required
+                    </div>
+                  )}
+                {new Date(event.eventDatetime) <= new Date() && (
+                  <span className="bg-red-500 text-white text-md p-2 rounded-md font-light flex-none">
+                    PAST EVENT
+                  </span>
                 )}
               </div>
             </div>

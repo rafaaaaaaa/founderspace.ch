@@ -44,7 +44,7 @@ function Footer() {
                 <FooterLink title="Board" href="board" />
               </li>
               <li className="flex flex-row  items-center mb-1">
-                <FooterLink title="Join Us" href="join" />
+                <FooterLink title="Stay Informed" href="stayinformed" />
               </li>
               <li className="flex flex-row  items-center mb-1">
                 <FooterLink title="Legal Notice, Impressum" href="Impressum" />

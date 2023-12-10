@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Landing from "./pages/Landing";
 import PartnersAndSponsors from "./pages/PartnersAndSponsors";
 import Board from "./pages/Board";
-import JoinUs from "./pages/JoinUs";
+import StayInformed from "./pages/StayInformed";
 import Events from "./pages/Events";
 import ParticlesBackground from "./components/ParticlesBackground";
 import NewsDetailPage from "./pages/NewsDetailPage";
@@ -38,7 +38,7 @@ function App() {
               <Route path="/events" element={<Events />}></Route>
               <Route path="/partnersandsponsors" element={<PartnersAndSponsors />}></Route>
               <Route path="/board" element={<Board />}></Route>
-              <Route path="/join" element={<JoinUs />}></Route>
+              <Route path="/stayinformed" element={<StayInformed />}></Route>
               <Route path="/impressum" element={<Impressum />}></Route>
               <Route path="/privacy" element={<Privacy />}></Route>
               <Route path="/news/:id" element={<NewsDetailPage />} exact />

@@ -12,8 +12,8 @@ function Footer() {
           <div>
             <a href="/" className="logo d-flex align-items-center">
               <img
-                src={require("../founderspace-logo.png")}
-                className="h-10"
+                src={require("../FounderSpace Logo.png")}
+                className="h-14"
                 alt="FounderSpace Logo"
               />
             </a>
@@ -69,6 +69,9 @@ function Footer() {
                 contact@founderspace.ch
               </a>
               <br />
+              <a className="underline" href="mailto:hr@founderspace.ch">
+                hr@founderspace.ch
+              </a>
             </p>
           </div>
         </div>

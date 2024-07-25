@@ -37,13 +37,13 @@ function Header(props) {
           <a href="/" className="flex flex-col justify-center">
             <div className="flex flex-col">
               <img
-                src={require("../founderspace-logo.png")}
+                src={require("../FounderSpace Logo.png")}
                 className="h-14 mr-3"
                 alt="FounderSpace Logo"
               />
               {opened && isMobile && (
                 <img
-                  src={require("../founderspace-logo.png")}
+                  src={require("../FounderSpace Logo.png")}
                   className="h-14 mr-3 absolute logo-glow"
                   alt="FounderSpace Logo"
                 />

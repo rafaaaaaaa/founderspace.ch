@@ -12,6 +12,7 @@ import ParticlesBackground from "./components/ParticlesBackground";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import Impressum from "./pages/Impressum";
 import Privacy from "./pages/Privacy";
+import OpenRoles from "./pages/OpenRoles";
 
 function App() {
   const blurBackground = async (state) => {
@@ -41,6 +42,7 @@ function App() {
               <Route path="/stayinformed" element={<StayInformed />}></Route>
               <Route path="/impressum" element={<Impressum />}></Route>
               <Route path="/privacy" element={<Privacy />}></Route>
+              <Route path="/openroles" element={<OpenRoles />}></Route>
               <Route path="/news/:id" element={<NewsDetailPage />} exact />
               <Route path="*" element={<Landing />} exact />
             </Routes>

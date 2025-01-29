@@ -20,7 +20,7 @@ export const getEvents = async () => {
   }
 };
 
-export const getTeamMember = async () => {
+export const getTeamMembers = async () => {
   try {
     const events = await client.getEntries({
       content_type: "teammember",

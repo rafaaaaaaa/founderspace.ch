@@ -1,5 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
-import { getTeamMember } from "../helpers/contentfulClient";
+import { getTeamMembers } from "../helpers/contentfulClient";
 import { useEffect, useState } from "react";
 import "./../index.css";
 

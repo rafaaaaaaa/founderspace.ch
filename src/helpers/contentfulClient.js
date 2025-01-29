@@ -23,7 +23,7 @@ export const getEvents = async () => {
 export const getTeamMembers = async () => {
   try {
     const events = await client.getEntries({
-      content_type: "teammember",
+      content_type: "boardmember",
     });
     const filteredMembers = events.items.map((data) => {
       const filteredMember = data.fields;

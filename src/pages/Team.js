@@ -9,7 +9,7 @@ function Team() {
 
   useEffect(() => {
     document.title = "FounderSpace | Team";
-    getTeamMember().then((res) => {
+    getTeamMembers().then((res) => {
       setTeamMembers(res.sort((a, b) => a.order - b.order));
       setIsLoaded(true);
     });

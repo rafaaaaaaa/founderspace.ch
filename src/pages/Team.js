@@ -1,16 +1,16 @@
 import { FaLinkedin } from "react-icons/fa";
-import { getBoardMembers } from "../helpers/contentfulClient";
+import { getTeamMember } from "../helpers/contentfulClient";
 import { useEffect, useState } from "react";
 import "./../index.css";
 
-function Board() {
-  const [boardMembers, setBoardMembers] = useState([]);
+function Team() {
+  const [teamMembers, setTeamMembers] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    document.title = "FounderSpace | Board";
-    getBoardMembers().then((res) => {
-      setBoardMembers(res.sort((a, b) => a.order - b.order));
+    document.title = "FounderSpace | Team";
+    getTeamMember().then((res) => {
+      setTeamMembers(res.sort((a, b) => a.order - b.order));
       setIsLoaded(true);
     });
   }, []);
@@ -47,17 +47,17 @@ function Board() {
   return (
     <div>
       <p className="text-white text-1xl md:text-left md:text-2xl mb-20 text-justify animate-fade-up animate-delay-300 animate-once">
-        <span className="text-highlight1 text-1xl">Meet the FounderSpace Board</span> - a
+        <span className="text-highlight1 text-1xl">Meet the FounderSpace Team</span> - a
         dynamic team of passionate UZH students united by a common mission: to
         create value for our fellow students. We believe in the transformative
         power of entrepreneurship and its ability to empower individuals to
         shape their own futures.
       </p>
       <div className="flex flex-col md:flex-row gap-4 items-center">
-        {boardMembers?.map((member) => memberItem(member))}
+        {teamMembers?.map((member) => memberItem(member))}
       </div>
     </div>
   );
 }
 
-export default Board;
+export default Team;

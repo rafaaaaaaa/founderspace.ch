@@ -20,10 +20,10 @@ export const getEvents = async () => {
   }
 };
 
-export const getBoardMembers = async () => {
+export const getTeamMember = async () => {
   try {
     const events = await client.getEntries({
-      content_type: "boardmember",
+      content_type: "teammember",
     });
     const filteredMembers = events.items.map((data) => {
       const filteredMember = data.fields;

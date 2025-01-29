@@ -73,7 +73,7 @@ function Header(props) {
                 <Link href="partnersandsponsors" title="Partners & Sponsors" />
               </li>
               <li>
-                <Link href="board" title="Board" />
+                <Link href="team" title="Team" />
               </li>
               <li>
                 <Button
@@ -95,7 +95,7 @@ function Header(props) {
                   <Link href="partnersandsponsors" title="Partners & Sponsors" />
                 </li>
                 <li>
-                  <Link href="board" title="Board" />
+                  <Link href="team" title="Team" />
                 </li>
                 <li>
                   <Link href="stayinformed" title="Stay Informed" />

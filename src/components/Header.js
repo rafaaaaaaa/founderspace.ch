@@ -50,7 +50,7 @@ function Header(props) {
               )}
             </div>
             <p className="uppercase text-white mt-1 font-uzh text-xs">
-              Student Association | University of Zurich
+              Patronage of the VSUZH Impulsfabrik
             </p>
           </a>
           <div className="inline-flex md:hidden">
